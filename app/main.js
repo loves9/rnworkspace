@@ -60,7 +60,7 @@ const TabNavigator = createBottomTabNavigator({
 
 export default createAppContainer(
     createBottomTabNavigator({
-        HomeStack,
-        SettingsStack,
+        Home: HomeStack,
+        Setting: SettingsStack,
     })
 );
