@@ -6,33 +6,44 @@ import { List, ListItem, Button } from "react-native-elements";
 export default class HandleScreen extends React.Component {
     static navigationOptions = { title: "列表", tabBarVisible: false };
 
-    // 渲染组件时隐藏tabbar 
-    componentWillMount() {
-        this.props.navigation.state.params = {
-            tabBarVisible: false
-        };
-    }
+    // 渲染组件时隐藏tabbar
+    componentWillMount() {}
 
     // 销毁组件时显示tabbar
-    componentWillUnmount() {
-        this.props.navigation.state.tabBarVisible = true;
+    componentWillUnmount() {}
+
+    buttonTap() {
+        Alert.alert(
+            "提示",
+            "确定提交吗？",
+            [
+                {
+                    text: "Ask me later",
+                    onPress: () => console.log("Ask me later pressed")
+                },
+                {
+                    text: "Cancel",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel"
+                },
+                {
+                    text: "OK",
+                    onPress: () => console.log("OK Pressed")
+                }
+            ],
+            { cancelable: false }
+        );
     }
 
     render() {
         return (
-            // <View
-            //     style={{
-            //         flex: 1,
-            //         justifyContent: "center",
-            //         alignItems: "center",
-            //         backgroundColor: "#afde44"
-            //     }}
-            // >
-            //     <Text>handle</Text>
-            // </View>
-
             <ScrollView contentContainerStyle={styles.contentContainer}>
-                <Button color="#fff" backgroundColor="#0398ff" title='下一步' />
+                <Button
+                    color="#fff"
+                    backgroundColor="#0398ff"
+                    title="下一步"
+                    onPress={() => {this.buttonTap()}}
+                />
             </ScrollView>
         );
     }

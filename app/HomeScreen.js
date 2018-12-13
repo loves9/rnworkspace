@@ -42,26 +42,7 @@ export default class HomeScreen extends React.Component {
     onItemClcik(i) {
         // console.log(item)
         this.props.navigation.push("Handle", { index: i });
-        // Alert.alert(
-        //     "Alert Title",
-        //     "My Alert Msg",
-        //     [
-        //         {
-        //             text: "Ask me later",
-        //             onPress: () => console.log("Ask me later pressed")
-        //         },
-        //         {
-        //             text: "Cancel",
-        //             onPress: () => console.log("Cancel Pressed"),
-        //             style: "cancel"
-        //         },
-        //         {
-        //             text: "OK",
-        //             onPress: () => console.log("OK Pressed")
-        //         }
-        //     ],
-        //     { cancelable: false }
-        // );
+        
     }
 
     render() {
