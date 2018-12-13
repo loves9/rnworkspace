@@ -7,85 +7,63 @@ import {
     StackNavigator
 } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import HomeView from "./HomeView";
+import HomeScreen from "./HomeScreen";
+import { Navigator } from './base/navigation/BaseNavigation'
+import HandleScreen from "./pages/example/HandleScreen";
 
-class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View
-                style={{
-                    flex: 1,
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}
-            >
-                <Text>Home!</Text>
-            </View>
-        );
+import MineScreen from "./base/MineScreen";
+import SettingsScreen from './base/SettingsScreen'
+
+// class SettingsScreen extends React.Component {
+//     static navigationOptions = {
+//         title: "设置"
+//     };
+
+//     render() {
+//         return (
+//             <View
+//                 style={{
+//                     flex: 1,
+//                     justifyContent: "center",
+//                     alignItems: "center"
+//                 }}
+//             >
+//                 <Text>Settings!</Text>
+//             </View>
+//         );
+//     }
+// }
+
+const HomeStack = createStackNavigator(
+    {
+        Home: HomeScreen,
+        Handle: HandleScreen,
+        Setting: SettingsScreen
+    },
+    {
+        initialRouteName: "Home"
     }
-}
-
-class SettingsScreen extends React.Component {
-    static navigationOptions = {
-        title: "Setting"
-    };
-
-    render() {
-        return (
-            <View
-                style={{
-                    flex: 1,
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}
-            >
-                <Text>Settings!</Text>
-            </View>
-        );
-    }
-}
-
-class A extends React.Component {
-    static navigationOptions = {
-        tabBarLabel: "Home!"
-    };
-
-    // etc..
-}
-
-class B extends React.Component {
-    static navigationOptions = {
-        tabBarLabel: "Settings!"
-    };
-
-    // etc..
-}
-
-const HomeStack = createStackNavigator({ Home: HomeView });
-const SettingsStack = createStackNavigator({ Settings: SettingsScreen });
-
-const TabNavigator = createBottomTabNavigator({
-    Home: HomeView,
-    Settings: SettingsScreen
-});
+);
+const HomeStackT = Navigator;
+const MineStack = createStackNavigator({ Mine: MineScreen });
 
 export default createAppContainer(
     createBottomTabNavigator(
         {
-            Home: HomeStack,
-            Setting: SettingsStack
+            首页: HomeStack,
+            我的: MineStack
         },
         {
             defaultNavigationOptions: ({ navigation }) => ({
                 tabBarIcon: ({ focused, horizontal, tintColor }) => {
                     const { routeName } = navigation.state;
                     let iconName;
-                    if (routeName === "Home") {
+                    if (routeName === "首页") {
                         iconName = `ios-information-circle${
                             focused ? "" : "-outline"
                         }`;
-                    } else if (routeName === "Setting") {
-                        iconName = `ios-contact${focused ? "" : "-outline"}`;
+                    } else if (routeName === "我的") {
+                        iconName = `ios-contact`;
                     }
 
                     // You can return any component that you like here! We usually use an
@@ -100,7 +78,7 @@ export default createAppContainer(
                 }
             }),
             tabBarOptions: {
-                activeTintColor: "tomato",
+                activeTintColor: "#0398ff",
                 inactiveTintColor: "gray"
             }
         }

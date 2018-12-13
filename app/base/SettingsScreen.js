@@ -1,10 +1,8 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Alert, Button } from "react-native";
 
-export default class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Hello',
-    };
+export default class SettingsScreen extends React.Component {
+    static navigationOptions = { title: "设置", tabBarVisible: false };
 
     render() {
         return (
@@ -15,7 +13,7 @@ export default class HomeScreen extends React.Component {
                     alignItems: "center"
                 }}
             >
-                <Text>Home!!!!!!!!</Text>
+                <Text>Settings!</Text>
             </View>
         );
     }
