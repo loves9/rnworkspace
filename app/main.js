@@ -37,15 +37,30 @@ import SettingsScreen from './base/SettingsScreen'
 const HomeStack = createStackNavigator(
     {
         Home: HomeScreen,
-        Handle: HandleScreen,
+        Handle: { 
+            screen: HandleScreen
+        },
         Setting: SettingsScreen
     },
     {
         initialRouteName: "Home"
     }
 );
+HomeStack.navigationOptions = ({ navigation }) => {
+    let tabBarVisible = true;
+    if (navigation.state.index > 0) {
+        tabBarVisible = false;
+    }
+
+    return {
+        tabBarVisible
+    };
+};
+
 const HomeStackT = Navigator;
 const MineStack = createStackNavigator({ Mine: MineScreen });
+
+
 
 export default createAppContainer(
     createBottomTabNavigator(
@@ -54,9 +69,20 @@ export default createAppContainer(
             我的: MineStack
         },
         {
-            defaultNavigationOptions: ({ navigation }) => ({
+            defaultNavigationOptions: ({ navigation }) => { 
+                const { routeName } = navigation.state;
+            
+                // let tabBarVisible = false
+
+                // let tabArray = ['首页', '我的']
+                // if(tabArray.indexOf(routeName) > -1){
+                //     tabBarVisible = true
+                // }
+
+                return {
+                // tabBarVisible: tabBarVisible,
                 tabBarIcon: ({ focused, horizontal, tintColor }) => {
-                    const { routeName } = navigation.state;
+                    
                     let iconName;
                     if (routeName === "首页") {
                         iconName = `ios-information-circle${
@@ -76,7 +102,7 @@ export default createAppContainer(
                         />
                     );
                 }
-            }),
+            }},
             tabBarOptions: {
                 activeTintColor: "#0398ff",
                 inactiveTintColor: "gray"

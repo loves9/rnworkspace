@@ -4,8 +4,6 @@ import { List, ListItem } from "react-native-elements";
 
 import { ScreenHeight, ScreenWidth } from "./util/index";
 
-import HandleScreen from "./pages/example/HandleScreen";
-
 const list = [
     {
         index: 0,
