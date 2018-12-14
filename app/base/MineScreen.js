@@ -11,6 +11,7 @@ export default class MineScreen extends React.Component {
             <View
                 style={{
                     flex: 1,
+                    backgroundColor: "#f3f3f3",
                     justifyContent: "center",
                     alignItems: "center"
                 }}

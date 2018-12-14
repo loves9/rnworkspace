@@ -3,8 +3,7 @@ import { Text, View } from "react-native";
 import {
     createBottomTabNavigator,
     createAppContainer,
-    createStackNavigator,
-    StackNavigator
+    createStackNavigator
 } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./HomeScreen";
@@ -37,9 +36,7 @@ import SettingsScreen from './base/SettingsScreen'
 const HomeStack = createStackNavigator(
     {
         Home: HomeScreen,
-        Handle: { 
-            screen: HandleScreen
-        },
+        Handle: HandleScreen,
         Setting: SettingsScreen
     },
     {
