@@ -5,7 +5,7 @@ import {
     StackNavigator
 } from "react-navigation";
 
-import { RouteConfigs } from '../../rootRoute'
+import { Routes } from '../../rootRoute'
 
 const StackNavigatorConfig = {
     initialRouteName: 'Home',
@@ -30,4 +30,4 @@ const StackNavigatorConfig = {
     // })
 };
 
-export const Navigator = createStackNavigator(RouteConfigs, StackNavigatorConfig);
+export const Navigator = createStackNavigator(Routes, StackNavigatorConfig);

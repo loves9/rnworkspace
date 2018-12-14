@@ -53,9 +53,13 @@ export default class HomeScreen extends React.Component {
         // }
     }
 
+    changeAvatar(){
+        this.props.navigation.push("Handle");
+
+    }
+
     onItemClcik() {
         // console.log(item)
-        // this.props.navigation.push("Handle");
     }
 
     render() {
@@ -81,7 +85,7 @@ export default class HomeScreen extends React.Component {
                             uri:
                                 "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
                         }}
-                        onPress={() => console.log("Works!")}
+                        onPress={() =>{ this.changeAvatar() }}
                         activeOpacity={0.7}
                     />
                     <View style={{ flex: 1, flexDirection: "column" }}>
