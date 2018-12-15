@@ -5,6 +5,10 @@ export default class LabelTextView extends React.Component {
     constructor(props) {
         super(props)
         this.state = { text: '' };
+
+        if(!this.props.title){
+            this.props.title = ''
+        }
     }
 
     render() {
@@ -16,9 +20,9 @@ export default class LabelTextView extends React.Component {
                     alignItems: "center"
                 }}
             >
-                <Text style={{ margin: 15, fontSize: 16 }}>联系电话</Text>
+                <Text style={{ margin: 15, fontSize: 16, width: 70 }}>{ this.props.title }</Text>
                 <TextInput
-                    style={{ height: 55, paddingRight: 5 }}
+                    style={{ height: 48, paddingRight: 5 }}
                     onChangeText={text => this.setState({ text })}
                     value={this.state.text}
                     placeholder="请输入手机号"

@@ -6,8 +6,7 @@ import {
     Button,
     ScrollView,
     TouchableOpacity,
-    StyleSheet,
-    Picker
+    StyleSheet
 } from "react-native";
 import {
     List,
@@ -18,7 +17,17 @@ import {
     FormValidationMessage,
     Divider
 } from "react-native-elements";
-
+import {
+    Container,
+    Header,
+    Content,
+    Tab,
+    Tabs,
+    Item,
+    Picker,
+    Icon
+} from "native-base";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { ScreenHeight, ScreenWidth } from "./util/index";
 
 import LabelTextView from "./component/LabelTextView";
@@ -51,11 +60,20 @@ export default class HomeScreen extends React.Component {
         //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         //     subtitle: 'Vice President'
         // }
+
+        this.state = {
+            selected2: undefined
+        };
     }
 
-    changeAvatar(){
-        this.props.navigation.push("Handle");
+    onValueChange2(value) {
+        this.setState({
+            selected2: value
+        });
+    }
 
+    changeAvatar() {
+        this.props.navigation.push("Handle");
     }
 
     onItemClcik() {
@@ -85,7 +103,9 @@ export default class HomeScreen extends React.Component {
                             uri:
                                 "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
                         }}
-                        onPress={() =>{ this.changeAvatar() }}
+                        onPress={() => {
+                            this.changeAvatar();
+                        }}
                         activeOpacity={0.7}
                     />
                     <View style={{ flex: 1, flexDirection: "column" }}>
@@ -100,7 +120,7 @@ export default class HomeScreen extends React.Component {
                     <Divider style={{ backgroundColor: "#f3f3f3" }} />
                 </View>
 
-                <LabelTextView />
+                <LabelTextView title='联系电话' />
 
                 <Text style={{ fontSize: 14, color: "#606266", margin: 15 }}>
                     服务预约
@@ -121,7 +141,8 @@ export default class HomeScreen extends React.Component {
                     <View
                         style={{
                             flexDirection: "row",
-                            paddingLeft: 15
+                            paddingLeft: 15,
+                            marginBottom: 15
                         }}
                     >
                         <TouchableOpacity
@@ -133,7 +154,6 @@ export default class HomeScreen extends React.Component {
                             </Text>
                         </TouchableOpacity>
 
-
                         <TouchableOpacity
                             style={styles.buttonTab}
                             onPress={this.onItemClcik}
@@ -143,9 +163,45 @@ export default class HomeScreen extends React.Component {
                             </Text>
                         </TouchableOpacity>
                     </View>
+
+                    <View style={{ marginLeft: 15 }}>
+                        <Divider style={{ backgroundColor: "#f3f3f3" }} />
+                    </View>
+
+                    <View
+                        style={{
+                            flexDirection: "row",
+                            alignItems: "center"
+                        }}
+                    >
+                        <Text
+                            style={{
+                                fontSize: 16,
+                                color: "#303133",
+                                width: 60,
+                                paddingLeft: 15
+                            }}
+                        >
+                            技师
+                        </Text>
+                        <Picker
+                            mode="dropdown"
+                            iosIcon={<Icon name="ios-arrow-down-outline" />}
+                            style={{ width: ScreenWidth - 60 }}
+                            placeholder="随机"
+                            placeholderStyle={{ color: "#bfc6ea" }}
+                            placeholderIconColor="#007aff"
+                            selectedValue={this.state.selected2}
+                            onValueChange={this.onValueChange2.bind(this)}
+                        >
+                            <Picker.Item label="Wallet" value="key0" />
+                            <Picker.Item label="ATM Card" value="key1" />
+                            <Picker.Item label="Debit Card" value="key2" />
+                            <Picker.Item label="Credit Card" value="key3" />
+                            <Picker.Item label="Net Banking" value="key4" />
+                        </Picker>
+                    </View>
                 </View>
-
-
             </ScrollView>
         );
     }
