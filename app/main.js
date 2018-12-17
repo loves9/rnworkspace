@@ -1,5 +1,15 @@
 import React from "react";
 import {
+    Text,
+    View,
+    Alert,
+    Button,
+    ScrollView,
+    TouchableOpacity,
+    StyleSheet
+} from "react-native";
+
+import {
     createBottomTabNavigator,
     createAppContainer,
     createStackNavigator
@@ -18,7 +28,7 @@ HomeStack.navigationOptions = ({ navigation }) => {
     }
 
     return {
-        tabBarVisible
+        tabBarVisible,
     };
 };
 

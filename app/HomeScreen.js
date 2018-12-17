@@ -26,7 +26,8 @@ import {
     Item,
     Picker,
     Icon,
-    DatePicker
+    DatePicker,
+    Toast
 } from "native-base";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { ScreenHeight, ScreenWidth } from "./util/index";
@@ -56,12 +57,6 @@ export default class HomeScreen extends React.Component {
 
     constructor(props) {
         super(props);
-
-        // let item = {
-        //     name: '待办-理发师',
-        //     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        //     subtitle: 'Vice President'
-        // }
 
         this.state = {
             selected2: undefined,
@@ -98,6 +93,10 @@ export default class HomeScreen extends React.Component {
 
     phoneTextChanged(value) {
         console.log(value);
+    }
+
+    nextButton() {
+        this.props.navigation.push('Handle')
     }
 
     render() {
@@ -265,11 +264,16 @@ export default class HomeScreen extends React.Component {
                         />
                     </View>
                 </View>
-                <Text style={{ fontSize: 14, margin: 15, color: "#303133" }}>
+                <Text style={{ fontSize: 14, margin: 15, color: "#606266" }}>
                     仅可预约7天内的工作日时段
                 </Text>
 
-                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => {
+                        this.nextButton();
+                    }}
+                >
                     <Text
                         style={{
                             fontSize: 17,
@@ -331,7 +335,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#298CCF",
         marginLeft: 15,
         marginRight: 15,
-        marginTop: 20,
+        marginTop: 5,
         paddingTop: 5,
         paddingBottom: 5,
         // width: 64,
