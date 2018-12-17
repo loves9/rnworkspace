@@ -25,12 +25,14 @@ import {
     Tabs,
     Item,
     Picker,
-    Icon
+    Icon,
+    DatePicker
 } from "native-base";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { ScreenHeight, ScreenWidth } from "./util/index";
 
 import LabelTextView from "./component/LabelTextView";
+import SelectButton from "./component/SelectButton";
 
 const list = [
     {
@@ -62,7 +64,10 @@ export default class HomeScreen extends React.Component {
         // }
 
         this.state = {
-            selected2: undefined
+            selected2: undefined,
+
+            selectButton1: true,
+            selectButton2: false
         };
     }
 
@@ -76,8 +81,23 @@ export default class HomeScreen extends React.Component {
         this.props.navigation.push("Handle");
     }
 
-    onItemClcik() {
-        // console.log(item)
+    onItemClcik(val, index) {
+        switch (index) {
+            case "1":
+                this.state.selectButton2 = false;
+                this.refs.selectbutton2.updateState(false);
+
+                break;
+
+            case "2":
+                this.state.selectButton1 = true;
+                this.refs.selectbutton1.updateState(false);
+                break;
+        }
+    }
+
+    phoneTextChanged(value) {
+        console.log(value);
     }
 
     render() {
@@ -115,17 +135,19 @@ export default class HomeScreen extends React.Component {
                         </Text>
                     </View>
                 </View>
-
                 <View style={{ marginLeft: 15 }}>
                     <Divider style={{ backgroundColor: "#f3f3f3" }} />
                 </View>
-
-                <LabelTextView title='联系电话' />
-
+                <LabelTextView
+                    title="联系电话"
+                    placeholder="请输入手机号"
+                    callBack={value => {
+                        this.phoneTextChanged(value);
+                    }}
+                />
                 <Text style={{ fontSize: 14, color: "#606266", margin: 15 }}>
                     服务预约
                 </Text>
-
                 <View
                     style={{
                         flexDirection: "column",
@@ -145,23 +167,26 @@ export default class HomeScreen extends React.Component {
                             marginBottom: 15
                         }}
                     >
-                        <TouchableOpacity
-                            style={styles.button}
-                            onPress={this.onItemClcik}
-                        >
-                            <Text style={{ fontSize: 14, color: "#fff" }}>
-                                理发
-                            </Text>
-                        </TouchableOpacity>
+                        <SelectButton
+                            ref="selectbutton1"
+                            title="理发"
+                            index="1"
+                            selected={this.state.selectButton1}
+                            onPress={(value, index) => {
+                                this.onItemClcik(value, index);
+                            }}
+                        />
 
-                        <TouchableOpacity
-                            style={styles.buttonTab}
-                            onPress={this.onItemClcik}
-                        >
-                            <Text style={{ fontSize: 14, color: "#303133" }}>
-                                护理
-                            </Text>
-                        </TouchableOpacity>
+                        <View style={{ width: 10 }} />
+
+                        <SelectButton
+                            ref="selectbutton2"
+                            title="护理"
+                            index="2"
+                            onPress={(value, index) => {
+                                this.onItemClcik(value, index);
+                            }}
+                        />
                     </View>
 
                     <View style={{ marginLeft: 15 }}>
@@ -178,7 +203,7 @@ export default class HomeScreen extends React.Component {
                             style={{
                                 fontSize: 16,
                                 color: "#303133",
-                                width: 60,
+                                width: 85,
                                 paddingLeft: 15
                             }}
                         >
@@ -187,7 +212,7 @@ export default class HomeScreen extends React.Component {
                         <Picker
                             mode="dropdown"
                             iosIcon={<Icon name="ios-arrow-down-outline" />}
-                            style={{ width: ScreenWidth - 60 }}
+                            style={{ width: ScreenWidth - 85 }}
                             placeholder="随机"
                             placeholderStyle={{ color: "#bfc6ea" }}
                             placeholderIconColor="#007aff"
@@ -201,7 +226,93 @@ export default class HomeScreen extends React.Component {
                             <Picker.Item label="Net Banking" value="key4" />
                         </Picker>
                     </View>
+
+                    <View style={{ marginLeft: 15 }}>
+                        <Divider style={{ backgroundColor: "#f3f3f3" }} />
+                    </View>
+
+                    <View
+                        style={{
+                            flexDirection: "row",
+                            alignItems: "center"
+                        }}
+                    >
+                        <Text
+                            style={{
+                                fontSize: 16,
+                                color: "#303133",
+                                width: 85,
+                                paddingLeft: 15
+                            }}
+                        >
+                            预约时间
+                        </Text>
+
+                        <DatePicker
+                            style={{ width: ScreenWidth - 85 }}
+                            defaultDate={new Date(2018, 4, 4)}
+                            minimumDate={new Date(2018, 1, 1)}
+                            maximumDate={new Date(2018, 12, 31)}
+                            // locale={"en"}
+                            timeZoneOffsetInMinutes={undefined}
+                            modalTransparent={false}
+                            // animationType={"dropdown"}
+                            androidMode={"default"}
+                            placeHolderText="Select date"
+                            // textStyle={{ color: "green" }}
+                            placeHolderTextStyle={{ color: "#d3d3d3" }}
+                            onDateChange={() => {}}
+                        />
+                    </View>
                 </View>
+                <Text style={{ fontSize: 14, margin: 15, color: "#303133" }}>
+                    仅可预约7天内的工作日时段
+                </Text>
+
+                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                    <Text
+                        style={{
+                            fontSize: 17,
+                            color: "#fff"
+                        }}
+                    >
+                        提交预约申请
+                    </Text>
+                </TouchableOpacity>
+
+                <Text
+                    style={{
+                        fontSize: 12,
+                        marginLeft: 15,
+                        marginTop: 20,
+                        color: "#298CCF"
+                    }}
+                >
+                    温馨提示:
+                </Text>
+
+                <Text
+                    style={{
+                        fontSize: 12,
+                        marginLeft: 15,
+                        marginRight: 15,
+                        marginTop: 10,
+                        color: "#303133"
+                    }}
+                >
+                    1、护理时间为：每天11:00-13:30及16:00-18:00，每个时段各有4个名额。
+                </Text>
+                <Text
+                    style={{
+                        fontSize: 12,
+                        marginLeft: 15,
+                        marginRight: 15,
+                        marginTop: 5,
+                        color: "#303133"
+                    }}
+                >
+                    2、已预约的服务，尚未完成时，不可重复预约其他服务。
+                </Text>
             </ScrollView>
         );
     }
@@ -216,26 +327,15 @@ const styles = StyleSheet.create({
     button: {
         alignItems: "center",
         justifyContent: "center",
+        color: "#fff",
         backgroundColor: "#298CCF",
-        padding: 10,
+        marginLeft: 15,
+        marginRight: 15,
+        marginTop: 20,
         paddingTop: 5,
         paddingBottom: 5,
-        borderRadius: 20,
-        width: 64,
-        height: 28
-    },
-    buttonTab: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#D5d5d5",
-        padding: 10,
-        paddingTop: 5,
-        paddingBottom: 5,
-        borderRadius: 20,
-        width: 64,
-        height: 28,
-
-        marginLeft: 10
+        // width: 64,
+        height: 48
     },
     countContainer: {
         alignItems: "center",
