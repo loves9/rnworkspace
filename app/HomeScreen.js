@@ -6,7 +6,8 @@ import {
     Button,
     ScrollView,
     TouchableOpacity,
-    StyleSheet
+    StyleSheet,
+    NativeModules
 } from "react-native";
 import {
     List,
@@ -74,11 +75,16 @@ export default class HomeScreen extends React.Component {
 
     changeAvatar() {
         // this.props.navigation.push("Handle");
-        Toast.show({
-            text: "Wrong password!",
-            buttonText: "Okay",
-            position: "bottom"
-          })
+        // Toast.show({
+        //     text: "Wrong password!",
+        //     buttonText: "Okay",
+        //     position: "bottom"
+        //   })
+
+        var HRTestModule = NativeModules.HRTestModule;
+        HRTestModule.getUser('feng shuai', (error, data)=>{
+            alert(data)
+        });
     }
 
     onItemClcik(val, index) {
