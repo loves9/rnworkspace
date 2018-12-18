@@ -73,7 +73,12 @@ export default class HomeScreen extends React.Component {
     }
 
     changeAvatar() {
-        this.props.navigation.push("Handle");
+        // this.props.navigation.push("Handle");
+        Toast.show({
+            text: "Wrong password!",
+            buttonText: "Okay",
+            position: "bottom"
+          })
     }
 
     onItemClcik(val, index) {

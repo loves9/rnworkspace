@@ -68,9 +68,7 @@ export default createAppContainer(
                     tabBarIcon: ({ focused, horizontal, tintColor }) => {
                         let iconName;
                         if (routeName === "首页") {
-                            iconName = `ios-information-circle${
-                                focused ? "" : "-outline"
-                            }`;
+                            iconName = `ios-home`;
                         } else if (routeName === "我的") {
                             iconName = `ios-contact`;
                         }
