@@ -81,10 +81,8 @@ export default class HomeScreen extends React.Component {
         //     position: "bottom"
         //   })
 
-        var HRTestModule = NativeModules.HRTestModule;
-        HRTestModule.getUser("feng shuai", (error, data) => {
-            alert(data);
-        });
+        var HRTestModule = NativeModules.HRDialogModule;
+        HRTestModule.toast('提交成功！')
     }
 
     onItemClcik(val, index) {

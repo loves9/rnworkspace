@@ -1,0 +1,6 @@
+framework module Pods_rnworkspace {
+  umbrella header "Pods-rnworkspace-umbrella.h"
+
+  export *
+  module * { export * }
+}
