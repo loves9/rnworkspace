@@ -34,9 +34,9 @@ import { ScreenHeight, ScreenWidth } from "../../util/index";
 
 import LabelTextView from "../../component/LabelTextView";
 import SelectButton from "../../component/SelectButton";
-import DatePicker from '../../component/HRDatePicker'
+import DatePicker from "../../component/HRDatePicker";
 
-import HttpBusinessRequest from '../api/api'
+import HttpBusinessRequest from "../api/api";
 
 const list = [
     {
@@ -69,8 +69,7 @@ export default class HomeScreen extends React.Component {
         };
     }
 
-    componentDidMount(){
-    }
+    componentDidMount() {}
 
     onValueChange2(value) {
         this.setState({
@@ -87,7 +86,7 @@ export default class HomeScreen extends React.Component {
         //   })
 
         var HRTestModule = NativeModules.HRDialogModule;
-        HRTestModule.toast('提交成功！')
+        HRTestModule.toast("提交成功！");
     }
 
     onItemClcik(val, index) {
@@ -110,9 +109,7 @@ export default class HomeScreen extends React.Component {
     }
 
     nextButton() {
-        // this.props.navigation.push("Handle");
-
-        this.sendRequest()
+        this.sendRequest();
     }
 
     sendRequest() {
@@ -121,7 +118,7 @@ export default class HomeScreen extends React.Component {
             console.log("complete");
         };
         request.success = (data, status, xhr) => {
-            console.log(data);
+            this.props.navigation.push("Handle");
         };
         request.error = (data, status, xhr) => {
             console.log(data);
@@ -290,7 +287,12 @@ export default class HomeScreen extends React.Component {
                             预约时间
                         </Text>
 
-                        <View style={{ width: ScreenWidth - 110, justifyContent: 'flex-end' }}>
+                        <View
+                            style={{
+                                width: ScreenWidth - 110,
+                                justifyContent: "flex-end"
+                            }}
+                        >
                             <DatePicker
                                 style={{ width: undefined }}
                                 defaultDate={new Date(2018, 11, 16, 8)}

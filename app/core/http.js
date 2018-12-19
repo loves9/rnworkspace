@@ -158,12 +158,12 @@ class BusinessRequest {
 
     beforeRequest() {
         if (this.config.mask) {
-            // HRDialogModule.showLoading("请稍候...");
+            HRDialogModule.showLoading("请稍候...");
 
             // 设置超时消失
             setTimeout(() => {
                 HRDialogModule.closeLoading();
-            }, 60000);
+            }, 6000);
         }
     }
 
@@ -191,23 +191,35 @@ class BusinessRequest {
             // body: parameter
         })
             .then(response => {
+                let responseData = response.json();
+
+                let responseStatus = response.status;
+                let responsestatusText = response.statusText;
+                let resultData = response._bodyText;
+
+                // 请求成功
+                if (responseStatus == 200) {
+                    // TODO: 判断业务成功与否
+
+                    this.success(resultData, responseStatus, responsestatusText)
+                }
+
                 // 请求成功 loading消失
                 HRDialogModule.closeLoading();
-                return response.json();
+                return responseData;
             })
             .then(responseJson => {
-                // console.log('feng', responseJson)
-
-                alert(responseJson);
                 return responseJson;
-            });
-        // .catch(error => {
-        //     // console.error(error);
+            })
+            .catch(error => {
+                console.error(error);
+                if (this.config.autoToast) {
+                    HRDialogModule.toast("请求异常" + error);
+                }
 
-        //     // if(this.config.autoToast){
-        //     //     HRDialogModule.toast('请求异常' + error)
-        //     // }
-        // });
+                // 错误回传
+                this.error(error);
+            });
     }
 }
 
