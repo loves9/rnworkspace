@@ -16,4 +16,14 @@ RCT_EXPORT_METHOD(toast:(NSString *)message)
 {
   [FSProgressHUD toast:message];
 }
+
+RCT_EXPORT_METHOD(showLoading:(NSString *)message)
+{
+  [FSProgressHUD showLoading:message];
+}
+
+RCT_EXPORT_METHOD(closeLoading)
+{
+  [FSProgressHUD closeLoading];
+}
 @end

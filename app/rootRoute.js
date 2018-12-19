@@ -1,13 +1,12 @@
 import React from "react";
 
-import HomeScreen from "./HomeScreen";
-import MineScreen from "./base/MineScreen";
+import HomeScreen from "./pages/base/HomeScreen";
+import MineScreen from "./pages/base/MineScreen";
 
-import SettingsScreen from "./base/SettingsScreen";
+import SettingsScreen from "./pages/base/SettingsScreen";
 import HandleScreen from "./pages/example/HandleScreen";
 
-
-import LeftItem from './base/navigation/LeftNavItem'
+import LeftItem from './pages/base/navigation/LeftNavItem'
 
 // 所有需要跳转的页面在这里注册
 export const Routes = {

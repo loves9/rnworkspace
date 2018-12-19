@@ -2,7 +2,11 @@
 // import { baseURL } from '../config';
 // import Statistics from './statistics'
 
-const baseURL = ''
+import { NativeModules } from "react-native";
+
+const baseURL = "http://10.65.105.224:3030";
+
+const HRDialogModule = NativeModules.HRDialogModule;
 
 class BusinessRequest {
     constructor(options = {}) {}
@@ -102,24 +106,20 @@ class BusinessRequest {
     requestCount = 0;
     requestIdPrefix = (function() {
         var date = new Date();
-        return "R" + date.getHours() + date.getMinutes() + date.getSeconds();
+        return (
+            "R" +
+            date.getHours() +
+            date.getMinutes() +
+            date.getSeconds() +
+            date.getMilliseconds()
+        );
     })();
     getReqeustId() {
+        let random = "";
         return this.requestIdPrefix + this.requestCount++;
     }
 
     baseRequest(args) {
-        if (typeof MXCommon == "undefined") {
-            // 初始化 MXCommon
-            document.addEventListener("deviceready", onDeviceReady, false); //等待cordova加载
-            function onDeviceReady() {
-                MXSetting &&
-                    typeof MXSetting.setConsoleLogEnabled === "function" &&
-                    MXSetting.setConsoleLogEnabled();
-                console.log("ondeviceready---http");
-            }
-        }
-
         //公共参数
         var _parameter = {
             //这里可添加公共参数，预留
@@ -158,9 +158,12 @@ class BusinessRequest {
 
     beforeRequest() {
         if (this.config.mask) {
-            GlobalVueObject.$vux.loading.show({
-                text: this.config.maskMsg
-            });
+            // HRDialogModule.showLoading("请稍候...");
+
+            // 设置超时消失
+            setTimeout(() => {
+                HRDialogModule.closeLoading();
+            }, 60000);
         }
     }
 
@@ -176,7 +179,6 @@ class BusinessRequest {
     send(parameter) {
         this.beforeRequest();
 
-        //执行本地Http请求。
         let _this = this;
 
         parameter = parameter || this.config.parameter;
@@ -185,9 +187,27 @@ class BusinessRequest {
             method: _this.config.method,
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: parameter
-        });
+            }
+            // body: parameter
+        })
+            .then(response => {
+                // 请求成功 loading消失
+                HRDialogModule.closeLoading();
+                return response.json();
+            })
+            .then(responseJson => {
+                // console.log('feng', responseJson)
+
+                alert(responseJson);
+                return responseJson;
+            });
+        // .catch(error => {
+        //     // console.error(error);
+
+        //     // if(this.config.autoToast){
+        //     //     HRDialogModule.toast('请求异常' + error)
+        //     // }
+        // });
     }
 }
 

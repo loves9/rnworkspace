@@ -5,7 +5,7 @@ import {
     StackNavigator
 } from "react-navigation";
 
-import { Routes } from '../../rootRoute'
+import { Routes } from '../../../rootRoute'
 
 const StackNavigatorConfig = {
     initialRouteName: 'Home',

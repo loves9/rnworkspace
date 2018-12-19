@@ -30,11 +30,13 @@ import {
     Toast
 } from "native-base";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { ScreenHeight, ScreenWidth } from "./util/index";
+import { ScreenHeight, ScreenWidth } from "../../util/index";
 
-import LabelTextView from "./component/LabelTextView";
-import SelectButton from "./component/SelectButton";
-import DatePicker from './component/HRDatePicker'
+import LabelTextView from "../../component/LabelTextView";
+import SelectButton from "../../component/SelectButton";
+import DatePicker from '../../component/HRDatePicker'
+
+import HttpBusinessRequest from '../api/api'
 
 const list = [
     {
@@ -65,6 +67,9 @@ export default class HomeScreen extends React.Component {
             selectButton1: true,
             selectButton2: false
         };
+    }
+
+    componentDidMount(){
     }
 
     onValueChange2(value) {
@@ -105,7 +110,24 @@ export default class HomeScreen extends React.Component {
     }
 
     nextButton() {
-        this.props.navigation.push("Handle");
+        // this.props.navigation.push("Handle");
+
+        this.sendRequest()
+    }
+
+    sendRequest() {
+        let request = HttpBusinessRequest.queryMockServer();
+        request.complete = () => {
+            console.log("complete");
+        };
+        request.success = (data, status, xhr) => {
+            console.log(data);
+        };
+        request.error = (data, status, xhr) => {
+            console.log(data);
+        };
+        // 发送请求
+        request.send();
     }
 
     render() {
