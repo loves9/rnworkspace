@@ -27,7 +27,6 @@ import {
     Item,
     Picker,
     Icon,
-    DatePicker,
     Toast
 } from "native-base";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -35,6 +34,7 @@ import { ScreenHeight, ScreenWidth } from "./util/index";
 
 import LabelTextView from "./component/LabelTextView";
 import SelectButton from "./component/SelectButton";
+import DatePicker from './component/HRDatePicker'
 
 const list = [
     {
@@ -255,7 +255,8 @@ export default class HomeScreen extends React.Component {
                     <View
                         style={{
                             flexDirection: "row",
-                            alignItems: "center"
+                            alignItems: "center",
+                            height: 48
                         }}
                     >
                         <Text
@@ -276,18 +277,10 @@ export default class HomeScreen extends React.Component {
                                 minimumDate={new Date(2018, 11, 15, 8)}
                                 maximumDate={new Date(2018, 11, 20, 17)}
                                 locale={"zh-Hans"}
-                                formatChosenDate={date => {
-                                    return [
-                                        date.getDate(),
-                                        date.getMonth() + 1,
-                                        date.getFullYear()
-                                    ].join("-");
-                                }}
                                 // timeZoneOffsetInMinutes={9}
                                 modalTransparent={false}
                                 animationType={"slide"}
                                 androidMode={"default"}
-                                mode={"datetime"}
                                 // placeHolderText="请选择"
                                 // textStyle={{ color: "green" }}
                                 placeHolderTextStyle={{ color: "#d3d3d3" }}
