@@ -82,8 +82,8 @@ export default class HomeScreen extends React.Component {
         //   })
 
         var HRTestModule = NativeModules.HRTestModule;
-        HRTestModule.getUser('feng shuai', (error, data)=>{
-            alert(data)
+        HRTestModule.getUser("feng shuai", (error, data) => {
+            alert(data);
         });
     }
 
@@ -107,7 +107,7 @@ export default class HomeScreen extends React.Component {
     }
 
     nextButton() {
-        this.props.navigation.push('Handle')
+        this.props.navigation.push("Handle");
     }
 
     render() {
@@ -212,7 +212,7 @@ export default class HomeScreen extends React.Component {
                         <Text
                             style={{
                                 fontSize: 16,
-                                color: "#303133",
+                                // color: "#303133",
                                 width: 85,
                                 paddingLeft: 15
                             }}
@@ -221,16 +221,27 @@ export default class HomeScreen extends React.Component {
                         </Text>
                         <Picker
                             mode="dropdown"
-                            iosIcon={<Icon name="ios-arrow-down-outline" />}
-                            style={{ width: ScreenWidth - 85 }}
+                            iosIcon={
+                                <Icon
+                                    name="ios-arrow-forward"
+                                    style={{ color: "#D5D5D5" }}
+                                />
+                            }
+                            style={{
+                                width: ScreenWidth - 85,
+                                justifyContent: "flex-end"
+                            }}
+                            textStyle={{ color: "#666666" }}
                             placeholder="随机"
                             placeholderStyle={{ color: "#bfc6ea" }}
                             placeholderIconColor="#007aff"
+                            headerBackButtonText="完成"
+                            // headerBackButtonTextStyle={{ color: "#000" }}
                             selectedValue={this.state.selected2}
                             onValueChange={this.onValueChange2.bind(this)}
                         >
-                            <Picker.Item label="Wallet" value="key0" />
-                            <Picker.Item label="ATM Card" value="key1" />
+                            <Picker.Item label="李秀萍" value="key0" />
+                            <Picker.Item label="丁轩瑶（已满）" value="key1" />
                             <Picker.Item label="Debit Card" value="key2" />
                             <Picker.Item label="Credit Card" value="key3" />
                             <Picker.Item label="Net Banking" value="key4" />
@@ -250,7 +261,7 @@ export default class HomeScreen extends React.Component {
                         <Text
                             style={{
                                 fontSize: 16,
-                                color: "#303133",
+                                // color: "#303133",
                                 width: 85,
                                 paddingLeft: 15
                             }}
@@ -258,20 +269,35 @@ export default class HomeScreen extends React.Component {
                             预约时间
                         </Text>
 
-                        <DatePicker
-                            style={{ width: ScreenWidth - 85 }}
-                            defaultDate={new Date(2018, 4, 4)}
-                            minimumDate={new Date(2018, 1, 1)}
-                            maximumDate={new Date(2018, 12, 31)}
-                            // locale={"en"}
-                            timeZoneOffsetInMinutes={undefined}
-                            modalTransparent={false}
-                            // animationType={"dropdown"}
-                            androidMode={"default"}
-                            placeHolderText="Select date"
-                            // textStyle={{ color: "green" }}
-                            placeHolderTextStyle={{ color: "#d3d3d3" }}
-                            onDateChange={() => {}}
+                        <View style={{ width: ScreenWidth - 110, justifyContent: 'flex-end' }}>
+                            <DatePicker
+                                style={{ width: undefined }}
+                                defaultDate={new Date(2018, 11, 16, 8)}
+                                minimumDate={new Date(2018, 11, 15, 8)}
+                                maximumDate={new Date(2018, 11, 20, 17)}
+                                locale={"zh-Hans"}
+                                formatChosenDate={date => {
+                                    return [
+                                        date.getDate(),
+                                        date.getMonth() + 1,
+                                        date.getFullYear()
+                                    ].join("-");
+                                }}
+                                // timeZoneOffsetInMinutes={9}
+                                modalTransparent={false}
+                                animationType={"slide"}
+                                androidMode={"default"}
+                                mode={"datetime"}
+                                // placeHolderText="请选择"
+                                // textStyle={{ color: "green" }}
+                                placeHolderTextStyle={{ color: "#d3d3d3" }}
+                                onDateChange={() => {}}
+                            />
+                        </View>
+
+                        <Icon
+                            name="ios-arrow-forward"
+                            style={{ color: "#D5D5D5", fontSize: 22 }}
                         />
                     </View>
                 </View>
