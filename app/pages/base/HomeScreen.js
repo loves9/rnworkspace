@@ -35,6 +35,7 @@ import { ScreenHeight, ScreenWidth } from "../../util/index";
 import LabelTextView from "../../component/LabelTextView";
 import SelectButton from "../../component/SelectButton";
 import DatePicker from "../../component/HRDatePicker";
+import HRButton from "../../component/HRButton";
 
 import HttpBusinessRequest from "../api/api";
 
@@ -320,21 +321,12 @@ export default class HomeScreen extends React.Component {
                     仅可预约7天内的工作日时段
                 </Text>
 
-                <TouchableOpacity
-                    style={styles.button}
+                <HRButton
+                    title="提交预约申请"
                     onPress={() => {
                         this.nextButton();
                     }}
-                >
-                    <Text
-                        style={{
-                            fontSize: 17,
-                            color: "#fff"
-                        }}
-                    >
-                        提交预约申请
-                    </Text>
-                </TouchableOpacity>
+                />
 
                 <Text
                     style={{

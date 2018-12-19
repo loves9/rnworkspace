@@ -146,7 +146,8 @@ class BusinessRequest {
         this.config.url = _url;
         this.config.parameter = _parameter;
         this.config.maskMsg = args.maskMsg ? args.maskMsg : this.config.maskMsg;
-        this.config.autoToast = args.autoToast ? true : false;
+        this.config.autoToast =
+            args.autoToast == undefined ? true : args.autoToast;
         this.config.dataType = args.dataType;
 
         if (args.mask != undefined) {
@@ -187,11 +188,16 @@ class BusinessRequest {
             method: _this.config.method,
             headers: {
                 "Content-Type": "application/json"
-            }
-            // body: parameter
+            },
+            body:
+                this.config.method == "get"
+                    ? undefined
+                    : JSON.stringify(parameter)
         })
             .then(response => {
                 let responseData = response.json();
+                // loading消失
+                HRDialogModule.closeLoading();
 
                 let responseStatus = response.status;
                 let responsestatusText = response.statusText;
@@ -201,11 +207,22 @@ class BusinessRequest {
                 if (responseStatus == 200) {
                     // TODO: 判断业务成功与否
 
-                    this.success(resultData, responseStatus, responsestatusText)
+                    this.success(
+                        resultData,
+                        responseStatus,
+                        responsestatusText
+                    );
+                } else {
+                    if (this.config.autoToast) {
+                        HRDialogModule.toast(
+                            "请求异常(" + responseStatus + ")"
+                        );
+                    }
+
+                    // 错误回传
+                    this.error(responseStatus);
                 }
 
-                // 请求成功 loading消失
-                HRDialogModule.closeLoading();
                 return responseData;
             })
             .then(responseJson => {
@@ -213,6 +230,9 @@ class BusinessRequest {
             })
             .catch(error => {
                 console.error(error);
+                // loading消失
+                HRDialogModule.closeLoading();
+
                 if (this.config.autoToast) {
                     HRDialogModule.toast("请求异常" + error);
                 }
