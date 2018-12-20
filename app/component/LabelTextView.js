@@ -30,11 +30,12 @@ export default class LabelTextView extends React.Component {
             >
                 <Text style={{ margin: 15, fontSize: 16, width: 70 }}>{ this.state.title }</Text>
                 <TextInput
-                    style={{ height: 48 }}
+                    style={{ height: 48, flex: 1 }}
                     onChangeText={text => { 
                         this.setState({ text }) 
                         this.props.callBack(text) 
                     }}
+                    maxLength={ 12 }
                     value={ this.state.text }
                     placeholder={ this.state.placeholder }
                     keyboardType="phone-pad"

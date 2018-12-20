@@ -53,7 +53,10 @@ export default class HomeScreen extends React.Component {
         };
     }
 
-    componentDidMount() {}
+    componentDidMount() {
+        // 发送请求
+
+    }
 
     onValueChange2(value) {
         this.setState({
@@ -93,7 +96,9 @@ export default class HomeScreen extends React.Component {
     }
 
     nextButton() {
-        this.sendRequest();
+        // this.sendRequest();
+        this.props.navigation.push("Handle");
+
     }
 
     sendRequest() {
