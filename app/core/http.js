@@ -164,7 +164,7 @@ class BusinessRequest {
             // 设置超时消失
             setTimeout(() => {
                 HRDialogModule.closeLoading();
-            }, 6000);
+            }, 60000);
         }
     }
 

@@ -40,7 +40,7 @@ export default class HandleScreen extends React.Component {
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <Button
                     color="#fff"
-                    backgroundColor="#0398ff"
+                    backgroundColor="#298CCF"
                     title="下一步"
                     onPress={() => {this.buttonTap()}}
                 />

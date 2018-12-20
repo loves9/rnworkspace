@@ -39,23 +39,6 @@ import HRButton from "../../component/HRButton";
 
 import HttpBusinessRequest from "../api/api";
 
-const list = [
-    {
-        index: 0,
-        name: "费用报销",
-        avatar_url:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-        subtitle: "Vice President"
-    },
-    {
-        index: 1,
-        name: "公文审批",
-        avatar_url:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-        subtitle: "Vice President"
-    }
-];
-
 export default class HomeScreen extends React.Component {
     static navigationOptions = { title: "首页" };
 
@@ -158,7 +141,7 @@ export default class HomeScreen extends React.Component {
                     />
                     <View style={{ flex: 1, flexDirection: "column" }}>
                         <Text style={{ fontSize: 17 }}>周冬雨</Text>
-                        <Text style={{ color: "#999999", marginTop: 5 }}>
+                        <Text style={{ color: "#606266", marginTop: 5 }}>
                             华融/华融科技/软件开发部
                         </Text>
                     </View>
@@ -249,9 +232,9 @@ export default class HomeScreen extends React.Component {
                                 width: ScreenWidth - 85,
                                 justifyContent: "flex-end"
                             }}
-                            textStyle={{ color: "#666666" }}
+                            textStyle={{ color: "#666666", marginRight: -20 }}
                             placeholder="随机"
-                            placeholderStyle={{ color: "#bfc6ea" }}
+                            placeholderStyle={{ color: 'rgb(210,210,219)' }}
                             placeholderIconColor="#007aff"
                             headerBackButtonText="完成"
                             // headerBackButtonTextStyle={{ color: "#000" }}
@@ -295,7 +278,7 @@ export default class HomeScreen extends React.Component {
                             }}
                         >
                             <DatePicker
-                                style={{ width: undefined }}
+                                // style={{ width: undefined, backgroundColor: 'red' }}
                                 defaultDate={new Date(2018, 11, 16, 8)}
                                 minimumDate={new Date(2018, 11, 15, 8)}
                                 maximumDate={new Date(2018, 11, 20, 17)}
@@ -305,7 +288,7 @@ export default class HomeScreen extends React.Component {
                                 animationType={"slide"}
                                 androidMode={"default"}
                                 // placeHolderText="请选择"
-                                // textStyle={{ color: "green" }}
+                                textStyle={{ color: "#666666", paddingRight: 12 }}
                                 placeHolderTextStyle={{ color: "#d3d3d3" }}
                                 onDateChange={() => {}}
                             />
