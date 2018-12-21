@@ -15,12 +15,11 @@ export default class HandleScreen extends React.Component {
     buttonTap() {
         Alert.alert(
             "提示",
-            "是否确定？",
+            "确定提交吗？",
             [
                 {
-                    text: "Cancel",
+                    text: "取消",
                     onPress: () => console.log("Cancel Pressed"),
-                    style: "取消"
                 },
                 {
                     text: "确定",

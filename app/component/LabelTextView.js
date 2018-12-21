@@ -35,7 +35,7 @@ export default class LabelTextView extends React.Component {
                         this.setState({ text }) 
                         this.props.callBack(text) 
                     }}
-                    maxLength={ 12 }
+                    maxLength={ 11 }
                     value={ this.state.text }
                     placeholder={ this.state.placeholder }
                     keyboardType="phone-pad"

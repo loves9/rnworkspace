@@ -72,8 +72,8 @@ export default class HomeScreen extends React.Component {
         //     position: "bottom"
         //   })
 
-        var HRTestModule = NativeModules.HRDialogModule;
-        HRTestModule.toast("提交成功！");
+        var HRDialogModule = NativeModules.HRDialogModule;
+        HRDialogModule.toast("提交成功！");
     }
 
     onItemClcik(val, index) {
@@ -145,7 +145,7 @@ export default class HomeScreen extends React.Component {
                         activeOpacity={0.7}
                     />
                     <View style={{ flex: 1, flexDirection: "column" }}>
-                        <Text style={{ fontSize: 17 }}>周冬雨</Text>
+                        <Text style={{ fontSize: 17 }}>Lucy</Text>
                         <Text style={{ color: "#606266", marginTop: 5 }}>
                             华融/华融科技/软件开发部
                         </Text>
@@ -247,7 +247,7 @@ export default class HomeScreen extends React.Component {
                             onValueChange={this.onValueChange2.bind(this)}
                         >
                             <Picker.Item label="李秀萍" value="key0" />
-                            <Picker.Item label="丁轩瑶（已满）" value="key1" />
+                            <Picker.Item label="丁轩瑶(已满)" value="key1" />
                             <Picker.Item label="Debit Card" value="key2" />
                             <Picker.Item label="Credit Card" value="key3" />
                             <Picker.Item label="Net Banking" value="key4" />
