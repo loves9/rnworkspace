@@ -14,10 +14,25 @@
 #import "FSSplashViewController.h"
 
 @implementation AppDelegate
+{
+  RCTRootView * _rootView;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  NSURL *jsCodeLocation;
+  
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  
+  _rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"rnworkspace"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
+  _rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  
+
   
   if(![[self currentVersion] isEqualToString: [AppInfo instance].shortVersion]){
     // 显示splash
@@ -32,7 +47,6 @@
   else {
     
     [self rootViewController:launchOptions];
-    
   }
   
   return YES;
@@ -46,18 +60,9 @@
 
 - (void)rootViewController:(NSDictionary *)launchOptions
 {
-  NSURL *jsCodeLocation;
-  
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-  
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"rnworkspace"
-                                               initialProperties:nil
-                                                   launchOptions:launchOptions];
-  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   
   UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = rootView;
+  rootViewController.view = _rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 }

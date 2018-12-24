@@ -84,9 +84,6 @@
     [df synchronize];
     
     self.callBack();
-    
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"SPLASH_FINLISH"
-//                                                        object:nil];
 }
 
 @end
