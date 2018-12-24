@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FenngKit/FenngKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:rnworkspace.xcodeproj">
    </FileRef>
    <FileRef

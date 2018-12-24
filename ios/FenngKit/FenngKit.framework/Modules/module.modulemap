@@ -1,0 +1,6 @@
+framework module FenngKit {
+  umbrella header "FenngKit.h"
+
+  export *
+  module * { export * }
+}

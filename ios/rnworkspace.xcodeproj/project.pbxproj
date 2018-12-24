@@ -49,6 +49,9 @@
 		5ED1DBA321C8CC5500AAE3EB /* HRDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DBA221C8CC5500AAE3EB /* HRDate.m */; };
 		5ED1DBEB21C9EFBD00AAE3EB /* FSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DBEA21C9EFBD00AAE3EB /* FSProgressHUD.m */; };
 		5ED1DBEE21C9F25D00AAE3EB /* HRDialogModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DBED21C9F25D00AAE3EB /* HRDialogModule.m */; };
+		5ED1DC4421CCE6A500AAE3EB /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DC4321CCE6A500AAE3EB /* AppInfo.m */; };
+		5ED1DC5421D0677A00AAE3EB /* FenngKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED1DC5321D0677A00AAE3EB /* FenngKit.framework */; };
+		5ED1DC8121D07ECE00AAE3EB /* FSSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DC8021D07ECE00AAE3EB /* FSSplashViewController.m */; };
 		736E12AA2A6849A1AE1742A3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546532566D3C4AF3A732BB74 /* MaterialIcons.ttf */; };
 		7C2B9076B15143DD92B372B5 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25A5F607EA8C4D8B9605181E /* FontAwesome5_Regular.ttf */; };
 		7E8E9906E08FD550B10FA775 /* Pods_rnworkspace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E4CC7717B794C0DAC7699 /* Pods_rnworkspace.framework */; };
@@ -409,6 +412,11 @@
 		5ED1DBEA21C9EFBD00AAE3EB /* FSProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSProgressHUD.m; sourceTree = "<group>"; };
 		5ED1DBEC21C9F25D00AAE3EB /* HRDialogModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRDialogModule.h; sourceTree = "<group>"; };
 		5ED1DBED21C9F25D00AAE3EB /* HRDialogModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRDialogModule.m; sourceTree = "<group>"; };
+		5ED1DC4221CCE6A500AAE3EB /* AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		5ED1DC4321CCE6A500AAE3EB /* AppInfo.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; tabWidth = 4; };
+		5ED1DC5321D0677A00AAE3EB /* FenngKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FenngKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ED1DC7F21D07ECE00AAE3EB /* FSSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSSplashViewController.h; sourceTree = "<group>"; };
+		5ED1DC8021D07ECE00AAE3EB /* FSSplashViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = FSSplashViewController.m; sourceTree = "<group>"; tabWidth = 4; };
 		66F4209E9012416AA505600D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		68CA114EE4D4444AB73F516A /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		6E13636FAED14F749A48F981 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
@@ -447,6 +455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED1DC5421D0677A00AAE3EB /* FenngKit.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -574,6 +583,8 @@
 		13B07FAE1A68108700A75B9A /* rnworkspace */ = {
 			isa = PBXGroup;
 			children = (
+				5ED1DC7D21D07E8E00AAE3EB /* UI */,
+				5ED1DC1921CCE69300AAE3EB /* App */,
 				5ED1DBC021C9EF4A00AAE3EB /* Compononts */,
 				5ED1DBA021C8CAE100AAE3EB /* Utils */,
 				5ED1DB9A21C8C49F00AAE3EB /* Core */,
@@ -614,6 +625,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5ED1DC5321D0677A00AAE3EB /* FenngKit.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				0A2E4CC7717B794C0DAC7699 /* Pods_rnworkspace.framework */,
 			);
@@ -702,6 +714,34 @@
 			);
 			name = Compononts;
 			path = rnworkspace/Compononts;
+			sourceTree = "<group>";
+		};
+		5ED1DC1921CCE69300AAE3EB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5ED1DC4221CCE6A500AAE3EB /* AppInfo.h */,
+				5ED1DC4321CCE6A500AAE3EB /* AppInfo.m */,
+			);
+			name = App;
+			path = rnworkspace/App;
+			sourceTree = "<group>";
+		};
+		5ED1DC7D21D07E8E00AAE3EB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5ED1DC7E21D07E8E00AAE3EB /* Base */,
+			);
+			name = UI;
+			path = rnworkspace/UI;
+			sourceTree = "<group>";
+		};
+		5ED1DC7E21D07E8E00AAE3EB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5ED1DC7F21D07ECE00AAE3EB /* FSSplashViewController.h */,
+				5ED1DC8021D07ECE00AAE3EB /* FSSplashViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		5EFBE69221C1024E00DC6B38 /* Products */ = {
@@ -1423,8 +1463,10 @@
 				5ED1DBEB21C9EFBD00AAE3EB /* FSProgressHUD.m in Sources */,
 				5ED1DB9F21C8C4C900AAE3EB /* HRTestModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				5ED1DC4421CCE6A500AAE3EB /* AppInfo.m in Sources */,
 				5ED1DBEE21C9F25D00AAE3EB /* HRDialogModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				5ED1DC8121D07ECE00AAE3EB /* FSSplashViewController.m in Sources */,
 				5ED1DBA321C8CC5500AAE3EB /* HRDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

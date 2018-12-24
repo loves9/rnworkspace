@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E4B2CAE21524EEE003B6118 /* FSTabBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4B2CAC21524EEE003B6118 /* FSTabBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E4B2CAF21524EEE003B6118 /* FSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B2CAD21524EEE003B6118 /* FSTabBarViewController.m */; };
+		5E917DD42151EF6B00D8719C /* FenngKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E917DD22151EF6B00D8719C /* FenngKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10C3216AF184001613CC /* FSDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10C1216AF184001613CC /* FSDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10C4216AF184001613CC /* FSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10C2216AF184001613CC /* FSDate.m */; };
+		5E9D10C7216AF1BD001613CC /* FSJSONObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10C5216AF1BD001613CC /* FSJSONObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10C8216AF1BD001613CC /* FSJSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10C6216AF1BD001613CC /* FSJSONObject.m */; };
+		5E9D10CC216AF220001613CC /* FSJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10CA216AF220001613CC /* FSJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10CD216AF220001613CC /* FSJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10CB216AF220001613CC /* FSJSON.m */; };
+		5E9D10D0216AF23F001613CC /* FSJSONArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10CE216AF23F001613CC /* FSJSONArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10D1216AF23F001613CC /* FSJSONArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10CF216AF23F001613CC /* FSJSONArray.m */; };
+		5E9D10E1216AFCAA001613CC /* UIImage+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10D3216AFCAA001613CC /* UIImage+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10E2216AFCAA001613CC /* UIView+WhenTappedBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10D4216AFCAA001613CC /* UIView+WhenTappedBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10E3216AFCAA001613CC /* UIView+WhenTappedBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10D5216AFCAA001613CC /* UIView+WhenTappedBlocks.m */; };
+		5E9D10E4216AFCAA001613CC /* UIColor+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10D6216AFCAA001613CC /* UIColor+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10E5216AFCAA001613CC /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10D7216AFCAA001613CC /* UIImage+Extend.m */; };
+		5E9D10E6216AFCAA001613CC /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10D8216AFCAA001613CC /* UIImage+animatedGIF.m */; };
+		5E9D10E7216AFCAA001613CC /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10D9216AFCAA001613CC /* UIView+Gesture.m */; };
+		5E9D10E8216AFCAA001613CC /* UIView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10DA216AFCAA001613CC /* UIView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10E9216AFCAA001613CC /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10DB216AFCAA001613CC /* NSString+Extend.m */; };
+		5E9D10EA216AFCAA001613CC /* UIImage+animatedGIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10DC216AFCAA001613CC /* UIImage+animatedGIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10EB216AFCAA001613CC /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10DD216AFCAA001613CC /* UIView+Size.m */; };
+		5E9D10EC216AFCAA001613CC /* UIView+Gesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10DE216AFCAA001613CC /* UIView+Gesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E9D10ED216AFCAA001613CC /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9D10DF216AFCAA001613CC /* UIColor+Extend.m */; };
+		5E9D10EE216AFCAA001613CC /* NSString+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9D10E0216AFCAA001613CC /* NSString+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EDD819D215222CD007BE56C /* FSButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EDD819B215222CD007BE56C /* FSButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EDD819E215222CD007BE56C /* FSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD819C215222CD007BE56C /* FSButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E4B2CAC21524EEE003B6118 /* FSTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSTabBarViewController.h; sourceTree = "<group>"; };
+		5E4B2CAD21524EEE003B6118 /* FSTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSTabBarViewController.m; sourceTree = "<group>"; };
+		5E917DCF2151EF6B00D8719C /* FenngKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FenngKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E917DD22151EF6B00D8719C /* FenngKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FenngKit.h; sourceTree = "<group>"; };
+		5E917DD32151EF6B00D8719C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9D10C1216AF184001613CC /* FSDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSDate.h; sourceTree = "<group>"; };
+		5E9D10C2216AF184001613CC /* FSDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSDate.m; sourceTree = "<group>"; };
+		5E9D10C5216AF1BD001613CC /* FSJSONObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSJSONObject.h; sourceTree = "<group>"; };
+		5E9D10C6216AF1BD001613CC /* FSJSONObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSJSONObject.m; sourceTree = "<group>"; };
+		5E9D10CA216AF220001613CC /* FSJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSJSON.h; sourceTree = "<group>"; };
+		5E9D10CB216AF220001613CC /* FSJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSJSON.m; sourceTree = "<group>"; };
+		5E9D10CE216AF23F001613CC /* FSJSONArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSJSONArray.h; sourceTree = "<group>"; };
+		5E9D10CF216AF23F001613CC /* FSJSONArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSJSONArray.m; sourceTree = "<group>"; };
+		5E9D10D3216AFCAA001613CC /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		5E9D10D4216AFCAA001613CC /* UIView+WhenTappedBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WhenTappedBlocks.h"; sourceTree = "<group>"; };
+		5E9D10D5216AFCAA001613CC /* UIView+WhenTappedBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WhenTappedBlocks.m"; sourceTree = "<group>"; };
+		5E9D10D6216AFCAA001613CC /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		5E9D10D7216AFCAA001613CC /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		5E9D10D8216AFCAA001613CC /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		5E9D10D9216AFCAA001613CC /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
+		5E9D10DA216AFCAA001613CC /* UIView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Size.h"; sourceTree = "<group>"; };
+		5E9D10DB216AFCAA001613CC /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
+		5E9D10DC216AFCAA001613CC /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		5E9D10DD216AFCAA001613CC /* UIView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Size.m"; sourceTree = "<group>"; };
+		5E9D10DE216AFCAA001613CC /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
+		5E9D10DF216AFCAA001613CC /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		5E9D10E0216AFCAA001613CC /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
+		5EDD819B215222CD007BE56C /* FSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSButton.h; sourceTree = "<group>"; };
+		5EDD819C215222CD007BE56C /* FSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E917DCB2151EF6B00D8719C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E4B2CAB21524E4E003B6118 /* FSTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5E4B2CAC21524EEE003B6118 /* FSTabBarViewController.h */,
+				5E4B2CAD21524EEE003B6118 /* FSTabBarViewController.m */,
+			);
+			path = FSTabBar;
+			sourceTree = "<group>";
+		};
+		5E4B2CB0215250D2003B6118 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E917DC52151EF6B00D8719C = {
+			isa = PBXGroup;
+			children = (
+				5E917DD12151EF6B00D8719C /* FenngKit */,
+				5E917DD02151EF6B00D8719C /* Products */,
+				5E4B2CB0215250D2003B6118 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E917DD02151EF6B00D8719C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E917DCF2151EF6B00D8719C /* FenngKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E917DD12151EF6B00D8719C /* FenngKit */ = {
+			isa = PBXGroup;
+			children = (
+				5E9D10D2216AFC38001613CC /* Category */,
+				5E9D10C0216AF12A001613CC /* FenngUtils */,
+				5E917DDC2151F41500D8719C /* FenngUI */,
+				5E917DD22151EF6B00D8719C /* FenngKit.h */,
+				5E917DD32151EF6B00D8719C /* Info.plist */,
+			);
+			path = FenngKit;
+			sourceTree = "<group>";
+		};
+		5E917DDC2151F41500D8719C /* FenngUI */ = {
+			isa = PBXGroup;
+			children = (
+				5E4B2CAB21524E4E003B6118 /* FSTabBar */,
+				5EDD819A2152229E007BE56C /* FSButton */,
+			);
+			path = FenngUI;
+			sourceTree = "<group>";
+		};
+		5E9D10C0216AF12A001613CC /* FenngUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5E9D10C9216AF1DE001613CC /* Json */,
+				5E9D10C1216AF184001613CC /* FSDate.h */,
+				5E9D10C2216AF184001613CC /* FSDate.m */,
+			);
+			path = FenngUtils;
+			sourceTree = "<group>";
+		};
+		5E9D10C9216AF1DE001613CC /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				5E9D10C5216AF1BD001613CC /* FSJSONObject.h */,
+				5E9D10C6216AF1BD001613CC /* FSJSONObject.m */,
+				5E9D10CA216AF220001613CC /* FSJSON.h */,
+				5E9D10CB216AF220001613CC /* FSJSON.m */,
+				5E9D10CE216AF23F001613CC /* FSJSONArray.h */,
+				5E9D10CF216AF23F001613CC /* FSJSONArray.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		5E9D10D2216AFC38001613CC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5E9D10E0216AFCAA001613CC /* NSString+Extend.h */,
+				5E9D10DB216AFCAA001613CC /* NSString+Extend.m */,
+				5E9D10D6216AFCAA001613CC /* UIColor+Extend.h */,
+				5E9D10DF216AFCAA001613CC /* UIColor+Extend.m */,
+				5E9D10DC216AFCAA001613CC /* UIImage+animatedGIF.h */,
+				5E9D10D8216AFCAA001613CC /* UIImage+animatedGIF.m */,
+				5E9D10D3216AFCAA001613CC /* UIImage+Extend.h */,
+				5E9D10D7216AFCAA001613CC /* UIImage+Extend.m */,
+				5E9D10DE216AFCAA001613CC /* UIView+Gesture.h */,
+				5E9D10D9216AFCAA001613CC /* UIView+Gesture.m */,
+				5E9D10DA216AFCAA001613CC /* UIView+Size.h */,
+				5E9D10DD216AFCAA001613CC /* UIView+Size.m */,
+				5E9D10D4216AFCAA001613CC /* UIView+WhenTappedBlocks.h */,
+				5E9D10D5216AFCAA001613CC /* UIView+WhenTappedBlocks.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5EDD819A2152229E007BE56C /* FSButton */ = {
+			isa = PBXGroup;
+			children = (
+				5EDD819B215222CD007BE56C /* FSButton.h */,
+				5EDD819C215222CD007BE56C /* FSButton.m */,
+			);
+			path = FSButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5E917DCC2151EF6B00D8719C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9D10C7216AF1BD001613CC /* FSJSONObject.h in Headers */,
+				5E9D10CC216AF220001613CC /* FSJSON.h in Headers */,
+				5E9D10EE216AFCAA001613CC /* NSString+Extend.h in Headers */,
+				5E9D10E4216AFCAA001613CC /* UIColor+Extend.h in Headers */,
+				5E9D10EC216AFCAA001613CC /* UIView+Gesture.h in Headers */,
+				5E9D10E1216AFCAA001613CC /* UIImage+Extend.h in Headers */,
+				5E9D10EA216AFCAA001613CC /* UIImage+animatedGIF.h in Headers */,
+				5E9D10E2216AFCAA001613CC /* UIView+WhenTappedBlocks.h in Headers */,
+				5E9D10E8216AFCAA001613CC /* UIView+Size.h in Headers */,
+				5E9D10C3216AF184001613CC /* FSDate.h in Headers */,
+				5E9D10D0216AF23F001613CC /* FSJSONArray.h in Headers */,
+				5E917DD42151EF6B00D8719C /* FenngKit.h in Headers */,
+				5E4B2CAE21524EEE003B6118 /* FSTabBarViewController.h in Headers */,
+				5EDD819D215222CD007BE56C /* FSButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E917DCE2151EF6B00D8719C /* FenngKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E917DD72151EF6B00D8719C /* Build configuration list for PBXNativeTarget "FenngKit" */;
+			buildPhases = (
+				5E917DCA2151EF6B00D8719C /* Sources */,
+				5E917DCB2151EF6B00D8719C /* Frameworks */,
+				5E917DCC2151EF6B00D8719C /* Headers */,
+				5E917DCD2151EF6B00D8719C /* Resources */,
+				5E4B2CA821524C16003B6118 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FenngKit;
+			productName = FenngKit;
+			productReference = 5E917DCF2151EF6B00D8719C /* FenngKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E917DC62151EF6B00D8719C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = iFeng;
+				TargetAttributes = {
+					5E917DCE2151EF6B00D8719C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5E917DC92151EF6B00D8719C /* Build configuration list for PBXProject "FenngKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5E917DC52151EF6B00D8719C;
+			productRefGroup = 5E917DD02151EF6B00D8719C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E917DCE2151EF6B00D8719C /* FenngKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E917DCD2151EF6B00D8719C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E4B2CA821524C16003B6118 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# copy framework to FWApp/Embedded\n\nrm -rf \"${PROJECT_DIR}/${PROJECT_NAME}.framework\"\ncd \"${CONFIGURATION_BUILD_DIR}\"\ncp -r \"${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n#end\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E917DCA2151EF6B00D8719C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9D10CD216AF220001613CC /* FSJSON.m in Sources */,
+				5E9D10E9216AFCAA001613CC /* NSString+Extend.m in Sources */,
+				5E9D10C8216AF1BD001613CC /* FSJSONObject.m in Sources */,
+				5E9D10EB216AFCAA001613CC /* UIView+Size.m in Sources */,
+				5E9D10E7216AFCAA001613CC /* UIView+Gesture.m in Sources */,
+				5E4B2CAF21524EEE003B6118 /* FSTabBarViewController.m in Sources */,
+				5E9D10D1216AF23F001613CC /* FSJSONArray.m in Sources */,
+				5E9D10E6216AFCAA001613CC /* UIImage+animatedGIF.m in Sources */,
+				5EDD819E215222CD007BE56C /* FSButton.m in Sources */,
+				5E9D10E3216AFCAA001613CC /* UIView+WhenTappedBlocks.m in Sources */,
+				5E9D10C4216AF184001613CC /* FSDate.m in Sources */,
+				5E9D10E5216AFCAA001613CC /* UIImage+Extend.m in Sources */,
+				5E9D10ED216AFCAA001613CC /* UIColor+Extend.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5E917DD52151EF6B00D8719C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E917DD62151EF6B00D8719C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E917DD82151EF6B00D8719C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXDK3TW596;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FenngKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenng.FenngKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E917DD92151EF6B00D8719C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXDK3TW596;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FenngKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenng.FenngKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E917DC92151EF6B00D8719C /* Build configuration list for PBXProject "FenngKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E917DD52151EF6B00D8719C /* Debug */,
+				5E917DD62151EF6B00D8719C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E917DD72151EF6B00D8719C /* Build configuration list for PBXNativeTarget "FenngKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E917DD82151EF6B00D8719C /* Debug */,
+				5E917DD92151EF6B00D8719C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E917DC62151EF6B00D8719C /* Project object */;
+}
