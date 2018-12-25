@@ -49,8 +49,8 @@
     [self rootViewController:launchOptions];
   }
   
-  
-  [NSThread sleepForTimeInterval:3.0];//设置启动页面时间
+  //设置启动页面时间
+  [self launchScreen];
   
   return YES;
 }
@@ -72,16 +72,17 @@
 
 - (void)launchScreen
 {
-  UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+  NSArray *objs = [[NSBundle mainBundle]loadNibNamed:@"LaunchScreen" owner:nil options:nil];
   
-  UIView *launchView = viewController.view;
+  UIView *launchView = objs[0];
   launchView.backgroundColor = [UIColor redColor];
   
   UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
   launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
   [mainWindow addSubview:launchView];
   
-  [UIView animateWithDuration:0.6f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+  // 停留时间 动画
+  [UIView animateWithDuration:1.0f delay:3.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
     launchView.alpha = 0.0f;
     launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5f, 1.5f, 1.0f);
   } completion:^(BOOL finished) {
