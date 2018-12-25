@@ -49,6 +49,9 @@
     [self rootViewController:launchOptions];
   }
   
+  
+  [NSThread sleepForTimeInterval:3.0];//设置启动页面时间
+  
   return YES;
 }
 
@@ -65,6 +68,25 @@
   rootViewController.view = _rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+}
+
+- (void)launchScreen
+{
+  UIViewController *viewController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+  
+  UIView *launchView = viewController.view;
+  launchView.backgroundColor = [UIColor redColor];
+  
+  UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+  launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
+  [mainWindow addSubview:launchView];
+  
+  [UIView animateWithDuration:0.6f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+    launchView.alpha = 0.0f;
+    launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5f, 1.5f, 1.0f);
+  } completion:^(BOOL finished) {
+    [launchView removeFromSuperview];
+  }];
 }
 
 @end
