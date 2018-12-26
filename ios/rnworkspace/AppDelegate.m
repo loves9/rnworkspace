@@ -75,11 +75,12 @@
   NSArray *objs = [[NSBundle mainBundle]loadNibNamed:@"LaunchScreen" owner:nil options:nil];
   
   UIView *launchView = objs[0];
-  launchView.backgroundColor = [UIColor redColor];
   
   UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
   launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
   [mainWindow addSubview:launchView];
+  
+  // TODO:适配不同机型
   
   // 停留时间 动画
   [UIView animateWithDuration:1.0f delay:3.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{

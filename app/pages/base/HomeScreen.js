@@ -72,8 +72,13 @@ export default class HomeScreen extends React.Component {
         //     position: "bottom"
         //   })
 
-        var HRDialogModule = NativeModules.HRDialogModule;
-        HRDialogModule.toast("提交成功！");
+        let HRDialogModule = NativeModules.HRDialogModule;
+        
+
+        let HRSessionModule = NativeModules.HRSessionModule;
+        HRSessionModule.getUser((error, dict)=>{
+            alert(JSON.stringify(dict.mobile))
+        });
     }
 
     onItemClcik(val, index) {
