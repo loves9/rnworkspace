@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Alert, StyleSheet, ScrollView } from "react-native";
+import { Text, View, Alert, StyleSheet, ScrollView, NativeModules } from "react-native";
 
 import { List, ListItem, Button } from "react-native-elements";
 
@@ -13,24 +13,29 @@ export default class HandleScreen extends React.Component {
     componentWillUnmount() {}
 
     buttonTap() {
-        Alert.alert(
-            "提示",
-            "确定提交吗？",
-            [
-                {
-                    text: "取消",
-                    onPress: () => console.log("Cancel Pressed"),
-                },
-                {
-                    text: "确定",
-                    onPress: () => {
-                        console.log("OK Pressed");
-                        this.props.navigation.pop();
-                    }
-                }
-            ],
-            { cancelable: false }
-        );
+        // Alert.alert(
+        //     "提示",
+        //     "确定提交吗？",
+        //     [
+        //         {
+        //             text: "取消",
+        //             onPress: () => console.log("Cancel Pressed"),
+        //         },
+        //         {
+        //             text: "确定",
+        //             onPress: () => {
+        //                 console.log("OK Pressed");
+        //                 this.props.navigation.pop();
+        //             }
+        //         }
+        //     ],
+        //     { cancelable: false }
+        // );
+
+        let HRPaymentModule = NativeModules.HRPaymentModule;
+        HRPaymentModule.WXPayment((error, success)=>{
+            
+        });
     }
 
     render() {

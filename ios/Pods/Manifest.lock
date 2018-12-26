@@ -1,16 +1,20 @@
 PODS:
   - MBProgressHUD (0.9)
+  - WechatOpenSDK (1.8.3)
 
 DEPENDENCIES:
   - MBProgressHUD (= 0.9.0)
+  - WechatOpenSDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MBProgressHUD
+    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
 
-PODFILE CHECKSUM: 0e7ca6c7a23db9e24f6d020efb4a48f72da6f29c
+PODFILE CHECKSUM: 1c7d6345eae491d357190370cf73e865e9e06e7d
 
 COCOAPODS: 1.5.3

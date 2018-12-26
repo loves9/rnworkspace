@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57E9B041CC1D8988C38DDC97CAEFCD76 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003FC7AF144EB5F591B8894C5D5A95A9 /* MBProgressHUD-dummy.m */; };
+		57E9B041CC1D8988C38DDC97CAEFCD76 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A99AA88DA7C49E8AF319F74E35AE37B /* MBProgressHUD-dummy.m */; };
 		5D51FCA5D07D2289B36A6D4EF5469D56 /* Pods-rnworkspace-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A922098E67DD4E8887B37234941BC89B /* Pods-rnworkspace-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69227BD718D0EDBAAABBD26C9EB6F5DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */; };
 		743D908EA0B4AE460FB463C2F7872086 /* Pods-rnworkspace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 731CF5A44688E88A0FA21761B9D2BB2F /* Pods-rnworkspace-dummy.m */; };
 		A3508385721FD61755B064A256E6FA45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4049C3B542D2F6D18A6EABFA6E09E8 /* CoreGraphics.framework */; };
-		AA00DCC0C8174B2D7E48EEC3C768B047 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B646C96E2D7DF54445B3719F800D79E9 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70ED90B39697713401047024DE11C7FC /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D206EDC84CE44D5DC711ADD087BC4B17 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7EF56646DB1B2F653740B0FB77850B /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA00DCC0C8174B2D7E48EEC3C768B047 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE35CC6ECA393839D616F5EF6F5419E /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B646C96E2D7DF54445B3719F800D79E9 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9B606FEDF6D2EE5370CCEC84032518C /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D206EDC84CE44D5DC711ADD087BC4B17 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 56CBF61D77F379E27A58D8DFB3F8D494 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6859EFD45B4A5CCDBC1CE96C179F32C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,29 +29,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003FC7AF144EB5F591B8894C5D5A95A9 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		1131F00DDE235CE282EE9E30A3597AA1 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = WeChatSDK1.8.3/WXApi.h; sourceTree = "<group>"; };
 		1336899B28C2814184D5025FF9634AF7 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1688888B47651DADA9AFE6C54F2B8F35 /* Pods-rnworkspace-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rnworkspace-frameworks.sh"; sourceTree = "<group>"; };
+		1A99AA88DA7C49E8AF319F74E35AE37B /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		263FFC4E42B6748D0B5A25DD8F94ABAB /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = WeChatSDK1.8.3/WechatAuthSDK.h; sourceTree = "<group>"; };
 		3ABB00BA504EB96ABAECBD035B00998F /* Pods-rnworkspace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rnworkspace.release.xcconfig"; sourceTree = "<group>"; };
 		44A8556895F68DBFC814D486D314BD82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6C8DD477A5B9224C9719463BDEE3F8 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WeChatSDK1.8.3/libWeChatSDK.a; sourceTree = "<group>"; };
 		4FD9578C4668F2F364A4E0FCCB193F25 /* Pods-rnworkspace-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rnworkspace-resources.sh"; sourceTree = "<group>"; };
+		56CBF61D77F379E27A58D8DFB3F8D494 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5BE35CC6ECA393839D616F5EF6F5419E /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6DEA45154F37E4DA7925C1AB609FE041 /* Pods-rnworkspace-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-rnworkspace-acknowledgements.plist"; sourceTree = "<group>"; };
-		70ED90B39697713401047024DE11C7FC /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		731CF5A44688E88A0FA21761B9D2BB2F /* Pods-rnworkspace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-rnworkspace-dummy.m"; sourceTree = "<group>"; };
-		7B0FDF6FF526E04C42E1886469A5CFAA /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		7FDC0FF70DE36C3FC1051E191D554E6E /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		85BCA874F2BA8DEB47F4808C5F2218CA /* Pods_rnworkspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_rnworkspace.framework; path = "Pods-rnworkspace.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8ABAF019A9F7D0D75268A37F9C16A5DC /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9849E0DD2B5471C52736CB517659C3CF /* Pods-rnworkspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rnworkspace.debug.xcconfig"; sourceTree = "<group>"; };
-		A64EB2A68373433449E90F3EBAED9925 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		A922098E67DD4E8887B37234941BC89B /* Pods-rnworkspace-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-rnworkspace-umbrella.h"; sourceTree = "<group>"; };
+		B85603BB05253C0660EB71A5CAFF6DD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8AA7D8516F9667795DD1C1C4C656868 /* Pods-rnworkspace-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-rnworkspace-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF9700B2DE120E4263E7A530BB8B5020 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CC15B6C39550110E8B52B884EA04C4 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DC4049C3B542D2F6D18A6EABFA6E09E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		EA7EF56646DB1B2F653740B0FB77850B /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		EB2F118F6F5FDA2C4122B64C99068BB5 /* Pods-rnworkspace.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-rnworkspace.modulemap"; sourceTree = "<group>"; };
+		EBA152A170FBF10951D0F3C484179300 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		F5D503F4B20134FE02D7BC1CEC7F5FAB /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = WeChatSDK1.8.3/WXApiObject.h; sourceTree = "<group>"; };
+		F9B606FEDF6D2EE5370CCEC84032518C /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3BC8460BC7C68FBD790C638B725EB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C8DD477A5B9224C9719463BDEE3F8 /* libWeChatSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +104,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5836A44A75C427EBF4739C55E2315758 /* Pods */ = {
+		48F3B7F742782D9D70C01085C4855A7D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9841862FE02BD09196B31E3026B4325C /* MBProgressHUD */,
+				B85603BB05253C0660EB71A5CAFF6DD6 /* Info.plist */,
+				8ABAF019A9F7D0D75268A37F9C16A5DC /* MBProgressHUD.modulemap */,
+				EBA152A170FBF10951D0F3C484179300 /* MBProgressHUD.xcconfig */,
+				1A99AA88DA7C49E8AF319F74E35AE37B /* MBProgressHUD-dummy.m */,
+				B8CC15B6C39550110E8B52B884EA04C4 /* MBProgressHUD-prefix.pch */,
+				F9B606FEDF6D2EE5370CCEC84032518C /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		4B8FB63017FBD63B8C17D3A4F6DD8E12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9E221EC77012725B5E126B216F51118 /* MBProgressHUD */,
+				B0234BB12ED4916AE3B732913D7740A2 /* WechatOpenSDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -105,21 +132,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				5836A44A75C427EBF4739C55E2315758 /* Pods */,
+				4B8FB63017FBD63B8C17D3A4F6DD8E12 /* Pods */,
 				473CE30B0962931A4567AFC6C699666E /* Products */,
 				E5530AEF838DD96B081D7E5BCD888CC7 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9841862FE02BD09196B31E3026B4325C /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				EA7EF56646DB1B2F653740B0FB77850B /* MBProgressHUD.h */,
-				8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */,
-				A16D0C6881DA59948052F438201FD774 /* Support Files */,
-			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		9F55250325DF021D0A9A50C1D0B29654 /* Pods-rnworkspace */ = {
@@ -140,20 +156,6 @@
 			path = "Target Support Files/Pods-rnworkspace";
 			sourceTree = "<group>";
 		};
-		A16D0C6881DA59948052F438201FD774 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF9700B2DE120E4263E7A530BB8B5020 /* Info.plist */,
-				7FDC0FF70DE36C3FC1051E191D554E6E /* MBProgressHUD.modulemap */,
-				A64EB2A68373433449E90F3EBAED9925 /* MBProgressHUD.xcconfig */,
-				003FC7AF144EB5F591B8894C5D5A95A9 /* MBProgressHUD-dummy.m */,
-				7B0FDF6FF526E04C42E1886469A5CFAA /* MBProgressHUD-prefix.pch */,
-				70ED90B39697713401047024DE11C7FC /* MBProgressHUD-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
-			sourceTree = "<group>";
-		};
 		A1B60FDF4C4080DE6E10488B9520A2F8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +163,29 @@
 				D433228A9E7E99840866656D9A6D0371 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		B0234BB12ED4916AE3B732913D7740A2 /* WechatOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				263FFC4E42B6748D0B5A25DD8F94ABAB /* WechatAuthSDK.h */,
+				1131F00DDE235CE282EE9E30A3597AA1 /* WXApi.h */,
+				F5D503F4B20134FE02D7BC1CEC7F5FAB /* WXApiObject.h */,
+				1E3BC8460BC7C68FBD790C638B725EB4 /* Frameworks */,
+			);
+			name = WechatOpenSDK;
+			path = WechatOpenSDK;
+			sourceTree = "<group>";
+		};
+		C9E221EC77012725B5E126B216F51118 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				56CBF61D77F379E27A58D8DFB3F8D494 /* MBProgressHUD.h */,
+				5BE35CC6ECA393839D616F5EF6F5419E /* MBProgressHUD.m */,
+				48F3B7F742782D9D70C01085C4855A7D /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		E5530AEF838DD96B081D7E5BCD888CC7 /* Targets Support Files */ = {
@@ -384,7 +409,7 @@
 		};
 		CF7020C6E9C00CE59577DC6F9E4255AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A64EB2A68373433449E90F3EBAED9925 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = EBA152A170FBF10951D0F3C484179300 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -414,7 +439,7 @@
 		};
 		F147DE2EB0DE030E54C6E63C35F621A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A64EB2A68373433449E90F3EBAED9925 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = EBA152A170FBF10951D0F3C484179300 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

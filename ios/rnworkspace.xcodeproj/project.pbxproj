@@ -56,6 +56,7 @@
 		5EDAD58021D3237000E37F68 /* HRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAD57F21D3237000E37F68 /* HRSession.m */; };
 		5EDAD58321D323BA00E37F68 /* HRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAD58221D323BA00E37F68 /* HRUser.m */; };
 		5EDAD58921D3542800E37F68 /* HRSessionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAD58821D3542800E37F68 /* HRSessionModule.m */; };
+		5EDAD5C221D36F2E00E37F68 /* HRPaymentModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAD5C121D36F2E00E37F68 /* HRPaymentModule.m */; };
 		736E12AA2A6849A1AE1742A3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546532566D3C4AF3A732BB74 /* MaterialIcons.ttf */; };
 		7C2B9076B15143DD92B372B5 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25A5F607EA8C4D8B9605181E /* FontAwesome5_Regular.ttf */; };
 		7E8E9906E08FD550B10FA775 /* Pods_rnworkspace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E4CC7717B794C0DAC7699 /* Pods_rnworkspace.framework */; };
@@ -441,6 +442,8 @@
 		5EDAD58221D323BA00E37F68 /* HRUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRUser.m; sourceTree = "<group>"; };
 		5EDAD58721D3542800E37F68 /* HRSessionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRSessionModule.h; sourceTree = "<group>"; };
 		5EDAD58821D3542800E37F68 /* HRSessionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRSessionModule.m; sourceTree = "<group>"; };
+		5EDAD5C021D36F2E00E37F68 /* HRPaymentModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRPaymentModule.h; sourceTree = "<group>"; };
+		5EDAD5C121D36F2E00E37F68 /* HRPaymentModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRPaymentModule.m; sourceTree = "<group>"; };
 		66F4209E9012416AA505600D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		68CA114EE4D4444AB73F516A /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		6E13636FAED14F749A48F981 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
@@ -718,6 +721,8 @@
 				5ED1DBED21C9F25D00AAE3EB /* HRDialogModule.m */,
 				5EDAD58721D3542800E37F68 /* HRSessionModule.h */,
 				5EDAD58821D3542800E37F68 /* HRSessionModule.m */,
+				5EDAD5C021D36F2E00E37F68 /* HRPaymentModule.h */,
+				5EDAD5C121D36F2E00E37F68 /* HRPaymentModule.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1501,6 +1506,7 @@
 				5ED1DBEE21C9F25D00AAE3EB /* HRDialogModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				5ED1DC8121D07ECE00AAE3EB /* FSSplashViewController.m in Sources */,
+				5EDAD5C221D36F2E00E37F68 /* HRPaymentModule.m in Sources */,
 				5ED1DBA321C8CC5500AAE3EB /* HRDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
