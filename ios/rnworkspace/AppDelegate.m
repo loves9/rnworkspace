@@ -32,6 +32,7 @@
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   
+  
 
   
   if(![[self currentVersion] isEqualToString: [AppInfo instance].shortVersion]){
@@ -47,10 +48,11 @@
   else {
     
     [self rootViewController:launchOptions];
+    
+    //设置启动页面时间
+    [self launchScreen];
   }
   
-  //设置启动页面时间
-  [self launchScreen];
   
   return YES;
 }

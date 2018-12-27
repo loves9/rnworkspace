@@ -13,6 +13,7 @@
 @implementation HRPaymentModule
 RCT_EXPORT_MODULE();
 
+#pragma mark - 微信支付
 RCT_EXPORT_METHOD(WXPayment:(RCTResponseSenderBlock)callback)
 {
   [WXApi registerApp:@"wxd930ea5d5a258f4f"];

@@ -33,7 +33,7 @@ export default class HandleScreen extends React.Component {
         // );
 
         let HRPaymentModule = NativeModules.HRPaymentModule;
-        HRPaymentModule.WXPayment((error, success)=>{
+        HRPaymentModule.WXPayment((error, success, fail)=>{
             
         });
     }
