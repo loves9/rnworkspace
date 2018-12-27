@@ -1,7 +1,8 @@
 import React from "react";
+import BaseScreen from './BaseScreen'
 import { Text, View, Alert, Button } from "react-native";
 
-export default class SettingsScreen extends React.Component {
+export default class SettingsScreen extends BaseScreen {
     static navigationOptions = { title: "设置", tabBarVisible: false };
 
     render() {

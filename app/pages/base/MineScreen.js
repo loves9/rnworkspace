@@ -1,4 +1,5 @@
 import React from "react";
+import BaseScreen from './BaseScreen'
 import { Text, View, Alert, Button } from "react-native";
 import {
     Container,
@@ -36,7 +37,7 @@ const list = [
     }
 ];
 
-export default class MineScreen extends React.Component {
+export default class MineScreen extends BaseScreen {
     static navigationOptions = {
         title: "我的"
     };

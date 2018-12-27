@@ -15,7 +15,9 @@ export const Routes = {
         navigationOptions: ({ navigation }) => ({
             headerLeft: (
                 <LeftItem onPress={ ()=>{ navigation.goBack() } }></LeftItem>
-            )
+            ),
+
+            // title: 'ssss'
         })
     },
     Home: {

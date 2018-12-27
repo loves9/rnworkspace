@@ -1,4 +1,5 @@
 import React from "react";
+import BaseScreen from './BaseScreen'
 import {
     Text,
     View,
@@ -39,7 +40,8 @@ import HRButton from "../../component/HRButton";
 
 import HttpBusinessRequest from "../api/api";
 
-export default class HomeScreen extends React.Component {
+
+export default class HomeScreen extends BaseScreen {
     static navigationOptions = { title: "首页" };
 
     constructor(props) {
@@ -102,7 +104,9 @@ export default class HomeScreen extends React.Component {
 
     nextButton() {
         // this.sendRequest();
-        this.props.navigation.push("Handle");
+        // this.props.navigation.push("Handle");
+
+        this.easyPush("Handle")
 
     }
 
