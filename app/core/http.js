@@ -84,7 +84,7 @@ class BusinessRequest {
          *  2. null  :空值，发送http请求的过程中不显示 ProgressBar。
          *  3. string:非空字符串，发送http请求的过程中显示一个 ProgressBar，其中的文字为该属性设定的值。
          */
-        maskMsg: "请稍候...",
+        maskMsg: "正在加载...",
 
         /**
          *  http请求出错时是否自动显示 toast 消息，测试环境下此值无效，强制弹出错误 toast 。
@@ -159,12 +159,7 @@ class BusinessRequest {
 
     beforeRequest() {
         if (this.config.mask) {
-            HRDialogModule.showLoading("请稍候...");
-
-            // 设置超时消失
-            setTimeout(() => {
-                HRDialogModule.closeLoading();
-            }, 60000);
+            HRDialogModule.showLoading(this.config.maskMsg);
         }
     }
 
@@ -195,6 +190,8 @@ class BusinessRequest {
                     : JSON.stringify(parameter)
         })
             .then(response => {
+                this.complete();
+
                 let responseData = response.json();
                 // loading消失
                 HRDialogModule.closeLoading();
@@ -207,11 +204,7 @@ class BusinessRequest {
                 if (responseStatus == 200) {
                     // TODO: 判断业务成功与否
 
-                    this.success(
-                        resultData,
-                        responseStatus,
-                        responsestatusText
-                    );
+                    this.success(responseData);
                 } else {
                     if (this.config.autoToast) {
                         HRDialogModule.toast(
@@ -220,7 +213,7 @@ class BusinessRequest {
                     }
 
                     // 错误回传
-                    this.error(responseStatus);
+                    this.error(responseData);
                 }
 
                 return responseData;

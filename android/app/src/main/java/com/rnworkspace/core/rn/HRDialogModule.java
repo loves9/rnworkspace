@@ -8,7 +8,6 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.kaopiz.kprogresshud.KProgressHUD;
-import com.rnworkspace.MainActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +19,8 @@ public class HRDialogModule extends ReactContextBaseJavaModule {
     public HRDialogModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
+
+    private KProgressHUD mHud;
 
 
     /**
@@ -59,18 +60,18 @@ public class HRDialogModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void showLoading(String message) {
-        KProgressHUD.create(new MainActivity())
+        mHud = KProgressHUD.create(this.getCurrentActivity())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel(message)
-                .setCancellable(true)
-                .setAnimationSpeed(2)
-                .setDimAmount(0.5f)
+                .setMaxProgress(90)
                 .show();
     }
 
     @ReactMethod
     public void closeLoading() {
-        KProgressHUD.create(new MainActivity()).dismiss();
+        if (mHud.isShowing()) {
+            mHud.dismiss();
+        }
     }
 
 

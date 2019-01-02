@@ -1,5 +1,5 @@
 import React from "react";
-import BaseScreen from './BaseScreen'
+import BaseScreen from "./BaseScreen";
 import {
     Text,
     View,
@@ -40,7 +40,6 @@ import HRButton from "../../component/HRButton";
 
 import HttpBusinessRequest from "../api/api";
 
-
 export default class HomeScreen extends BaseScreen {
     static navigationOptions = { title: "首页" };
 
@@ -57,7 +56,6 @@ export default class HomeScreen extends BaseScreen {
 
     componentDidMount() {
         // 发送请求
-
     }
 
     onValueChange2(value) {
@@ -67,20 +65,12 @@ export default class HomeScreen extends BaseScreen {
     }
 
     changeAvatar() {
-        // this.props.navigation.push("Handle");
-        // Toast.show({
-        //     text: "Wrong password!",
-        //     buttonText: "Okay",
-        //     position: "bottom"
-        //   })
+        // let HRSessionModule = NativeModules.HRSessionModule;
+        // HRSessionModule.getUser((error, dict)=>{
+        //     alert(JSON.stringify(dict.mobile))
+        // });
 
-        let HRDialogModule = NativeModules.HRDialogModule;
-        
-
-        let HRSessionModule = NativeModules.HRSessionModule;
-        HRSessionModule.getUser((error, dict)=>{
-            alert(JSON.stringify(dict.mobile))
-        });
+        this.sendRequest();
     }
 
     onItemClcik(val, index) {
@@ -103,23 +93,22 @@ export default class HomeScreen extends BaseScreen {
     }
 
     nextButton() {
-        // this.sendRequest();
         // this.props.navigation.push("Handle");
 
-        this.easyPush("Handle")
-
+        this.easyPush("Handle");
     }
 
     sendRequest() {
         let request = HttpBusinessRequest.queryMockServer();
         request.complete = () => {
-            console.log("complete");
+            console.log("complete", 'feng');
         };
-        request.success = (data, status, xhr) => {
-            this.props.navigation.push("Handle");
+        request.success = (responseData) => {
+            // this.props.navigation.push("Handle");
+            console.log(responseData, 'feng')
         };
-        request.error = (data, status, xhr) => {
-            console.log(data);
+        request.error = (responseData) => {
+            console.error(responseData, 'feng');
         };
         // 发送请求
         request.send();
@@ -248,7 +237,7 @@ export default class HomeScreen extends BaseScreen {
                             }}
                             textStyle={{ color: "#666666", marginRight: -20 }}
                             placeholder="随机"
-                            placeholderStyle={{ color: 'rgb(210,210,219)' }}
+                            placeholderStyle={{ color: "rgb(210,210,219)" }}
                             placeholderIconColor="#007aff"
                             headerBackButtonText="完成"
                             // headerBackButtonTextStyle={{ color: "#000" }}
@@ -302,7 +291,10 @@ export default class HomeScreen extends BaseScreen {
                                 animationType={"slide"}
                                 androidMode={"default"}
                                 // placeHolderText="请选择"
-                                textStyle={{ color: "#666666", paddingRight: 12 }}
+                                textStyle={{
+                                    color: "#666666",
+                                    paddingRight: 12
+                                }}
                                 placeHolderTextStyle={{ color: "#d3d3d3" }}
                                 onDateChange={() => {}}
                             />
