@@ -104,7 +104,7 @@ export default class HomeScreen extends BaseScreen {
             console.log("complete", 'feng');
         };
         request.success = (responseData) => {
-            // this.props.navigation.push("Handle");
+            this.easyPush('Handle')
             console.log(responseData, 'feng')
         };
         request.error = (responseData) => {
