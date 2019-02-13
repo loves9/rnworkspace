@@ -16,6 +16,8 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
+#import "FSWebViewController.h"
+
 @implementation AppDelegate
 {
   RCTRootView * _rootView;
@@ -23,27 +25,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [Fabric with:@[[Crashlytics class]]];
+//  [Fabric with:@[[Crashlytics class]]];
   
-  NSURL *jsCodeLocation;
-  
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-  
-  _rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"rnworkspace"
-                                               initialProperties:nil
-                                                   launchOptions:launchOptions];
-  _rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+  // 初始化RN
+//  NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+//  _rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+//                                                      moduleName:@"rnworkspace"
+//                                               initialProperties:nil
+//                                                   launchOptions:launchOptions];
+//  _rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   
-  
-
-  
+  // 判断splash
   if(![[self currentVersion] isEqualToString: [AppInfo instance].shortVersion]){
     // 显示splash
     FSSplashViewController * fssvc = [[FSSplashViewController alloc] init];
-    fssvc.callBack = ^{
+    fssvc.finishSplashBlock = ^{
       [self rootViewController:launchOptions];
     };
     
@@ -51,11 +49,12 @@
     [self.window makeKeyAndVisible];
   }
   else {
+    // 不经过splash
     
     [self rootViewController:launchOptions];
     
-    //设置启动页面时间
-    [self launchScreen];
+    //设置启动页面停留时间
+//    [self launchScreen];
   }
   
   
@@ -70,10 +69,11 @@
 
 - (void)rootViewController:(NSDictionary *)launchOptions
 {
+//  UIViewController *rootViewController = [UIViewController new];
+//  rootViewController.view = _rootView;
   
-  UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = _rootView;
-  self.window.rootViewController = rootViewController;
+  FSWebViewController * webVC = [[FSWebViewController alloc] init];
+  self.window.rootViewController = webVC;
   [self.window makeKeyAndVisible];
 }
 

@@ -83,7 +83,7 @@
     [df setObject:[AppInfo instance].shortVersion forKey:@"splash_version"];
     [df synchronize];
     
-    self.callBack();
+    self.finishSplashBlock();
 }
 
 @end

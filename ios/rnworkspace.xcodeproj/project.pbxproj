@@ -45,6 +45,9 @@
 		4267D4AD9A8B4A8684419FF8 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7384DDC364FC41308C2275F5 /* Feather.ttf */; };
 		48D8A702843D4F7B908171A0 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C83142B43DA4C14A16F3CE1 /* FontAwesome5_Solid.ttf */; };
 		53193C01F5044ED49A16166A /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 052E1A01BBDC48F4829C179B /* FontAwesome.ttf */; };
+		5E5899F4221297D8002012AE /* FSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899F3221297D8002012AE /* FSBaseViewController.m */; };
+		5E5899FB22129AC2002012AE /* FSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899FA22129AC2002012AE /* FSWebViewController.m */; };
+		5E5899FF22129CEF002012AE /* FSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899FE22129CEF002012AE /* FSRouter.m */; };
 		5E92127B21D4D78400F3ED81 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E92127921D4D78400F3ED81 /* Crashlytics.framework */; };
 		5E92127C21D4D78400F3ED81 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E92127A21D4D78400F3ED81 /* Fabric.framework */; };
 		5ED1DB9F21C8C4C900AAE3EB /* HRTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DB9E21C8C4C900AAE3EB /* HRTestModule.m */; };
@@ -424,6 +427,12 @@
 		53349CFE22AB43BDA28BDA9E /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		546532566D3C4AF3A732BB74 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		5CF0FA1D3BD04BFD8314989F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		5E5899F2221297D8002012AE /* FSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBaseViewController.h; sourceTree = "<group>"; };
+		5E5899F3221297D8002012AE /* FSBaseViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		5E5899F922129AC2002012AE /* FSWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWebViewController.h; sourceTree = "<group>"; };
+		5E5899FA22129AC2002012AE /* FSWebViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		5E5899FD22129CEF002012AE /* FSRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSRouter.h; sourceTree = "<group>"; };
+		5E5899FE22129CEF002012AE /* FSRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSRouter.m; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5E92127921D4D78400F3ED81 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		5E92127A21D4D78400F3ED81 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -676,6 +685,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5E5899F822129AAC002012AE /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5E5899F922129AC2002012AE /* FSWebViewController.h */,
+				5E5899FA22129AC2002012AE /* FSWebViewController.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		5E5899FC22129C4C002012AE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5E5899FD22129CEF002012AE /* FSRouter.h */,
+				5E5899FE22129CEF002012AE /* FSRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5E8F1DB221C0B39800532152 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +733,7 @@
 		5ED1DB9A21C8C49F00AAE3EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5E5899FC22129C4C002012AE /* Router */,
 				5ED1DB9B21C8C49F00AAE3EB /* RN */,
 			);
 			name = Core;
@@ -772,6 +800,7 @@
 		5ED1DC7D21D07E8E00AAE3EB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5E5899F822129AAC002012AE /* Web */,
 				5ED1DC7E21D07E8E00AAE3EB /* Base */,
 			);
 			name = UI;
@@ -783,6 +812,8 @@
 			children = (
 				5ED1DC7F21D07ECE00AAE3EB /* FSSplashViewController.h */,
 				5ED1DC8021D07ECE00AAE3EB /* FSSplashViewController.m */,
+				5E5899F2221297D8002012AE /* FSBaseViewController.h */,
+				5E5899F3221297D8002012AE /* FSBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1447,10 +1478,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rnworkspace/Pods-rnworkspace-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1477,11 +1510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -1529,10 +1558,13 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				5EDAD58321D323BA00E37F68 /* HRUser.m in Sources */,
 				5ED1DC4421CCE6A500AAE3EB /* AppInfo.m in Sources */,
+				5E5899F4221297D8002012AE /* FSBaseViewController.m in Sources */,
 				5ED1DBEE21C9F25D00AAE3EB /* HRDialogModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				5ED1DC8121D07ECE00AAE3EB /* FSSplashViewController.m in Sources */,
 				5EDAD5C221D36F2E00E37F68 /* HRPaymentModule.m in Sources */,
+				5E5899FF22129CEF002012AE /* FSRouter.m in Sources */,
+				5E5899FB22129AC2002012AE /* FSWebViewController.m in Sources */,
 				5ED1DBA321C8CC5500AAE3EB /* HRDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

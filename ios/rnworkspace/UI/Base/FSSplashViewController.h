@@ -10,11 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^finishSplashBlock)(void);
+typedef void(^FinishSplashBlock)(void);
 
 @interface FSSplashViewController : UIViewController
 
-@property(nonatomic, copy)finishSplashBlock callBack;
+@property(nonatomic, copy)FinishSplashBlock finishSplashBlock;
 
 @end
 
