@@ -18,6 +18,8 @@
 
 #import "FSWebViewController.h"
 
+#import "FSHttpRequest.h"
+
 @implementation AppDelegate
 {
   RCTRootView * _rootView;
@@ -54,7 +56,7 @@
     [self rootViewController:launchOptions];
     
     //设置启动页面停留时间
-//    [self launchScreen];
+    [self launchScreen];
   }
   
   
@@ -71,6 +73,15 @@
 {
 //  UIViewController *rootViewController = [UIViewController new];
 //  rootViewController.view = _rootView;
+  
+  // request判断跳转
+  FSHttpRequest * req = [[FSHttpRequest alloc] initWithURL:@"http://10.65.55.224:3030/user" method:HttpRequestMethodGet];
+  req.requestSuccessfulHandler = ^(FSHttpRequest * _Nonnull request) {
+    
+  };
+  
+  [req execute];
+  
   
   FSWebViewController * webVC = [[FSWebViewController alloc] init];
   self.window.rootViewController = webVC;

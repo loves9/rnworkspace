@@ -48,6 +48,8 @@
 		5E5899F4221297D8002012AE /* FSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899F3221297D8002012AE /* FSBaseViewController.m */; };
 		5E5899FB22129AC2002012AE /* FSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899FA22129AC2002012AE /* FSWebViewController.m */; };
 		5E5899FF22129CEF002012AE /* FSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5899FE22129CEF002012AE /* FSRouter.m */; };
+		5E589A552215037F002012AE /* FSHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E589A542215037F002012AE /* FSHttpRequest.m */; };
+		5E589A6722155DC1002012AE /* FSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E589A6622155DC1002012AE /* FSHttpClient.m */; };
 		5E92127B21D4D78400F3ED81 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E92127921D4D78400F3ED81 /* Crashlytics.framework */; };
 		5E92127C21D4D78400F3ED81 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E92127A21D4D78400F3ED81 /* Fabric.framework */; };
 		5ED1DB9F21C8C4C900AAE3EB /* HRTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DB9E21C8C4C900AAE3EB /* HRTestModule.m */; };
@@ -433,6 +435,10 @@
 		5E5899FA22129AC2002012AE /* FSWebViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebViewController.m; sourceTree = "<group>"; tabWidth = 4; };
 		5E5899FD22129CEF002012AE /* FSRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSRouter.h; sourceTree = "<group>"; };
 		5E5899FE22129CEF002012AE /* FSRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSRouter.m; sourceTree = "<group>"; };
+		5E589A532215037F002012AE /* FSHttpRequest.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FSHttpRequest.h; sourceTree = "<group>"; tabWidth = 2; };
+		5E589A542215037F002012AE /* FSHttpRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSHttpRequest.m; sourceTree = "<group>"; };
+		5E589A6522155DC1002012AE /* FSHttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSHttpClient.h; sourceTree = "<group>"; };
+		5E589A6622155DC1002012AE /* FSHttpClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSHttpClient.m; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5E92127921D4D78400F3ED81 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		5E92127A21D4D78400F3ED81 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -703,6 +709,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		5E589A52221501C8002012AE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5E589A532215037F002012AE /* FSHttpRequest.h */,
+				5E589A542215037F002012AE /* FSHttpRequest.m */,
+				5E589A6522155DC1002012AE /* FSHttpClient.h */,
+				5E589A6622155DC1002012AE /* FSHttpClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		5E8F1DB221C0B39800532152 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,19 +750,20 @@
 		5ED1DB9A21C8C49F00AAE3EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5E589A52221501C8002012AE /* Network */,
 				5E5899FC22129C4C002012AE /* Router */,
-				5ED1DB9B21C8C49F00AAE3EB /* RN */,
+				5ED1DB9B21C8C49F00AAE3EB /* ReactNative */,
 			);
 			name = Core;
 			path = rnworkspace/Core;
 			sourceTree = "<group>";
 		};
-		5ED1DB9B21C8C49F00AAE3EB /* RN */ = {
+		5ED1DB9B21C8C49F00AAE3EB /* ReactNative */ = {
 			isa = PBXGroup;
 			children = (
 				5ED1DB9C21C8C49F00AAE3EB /* Module */,
 			);
-			path = RN;
+			path = ReactNative;
 			sourceTree = "<group>";
 		};
 		5ED1DB9C21C8C49F00AAE3EB /* Module */ = {
@@ -1558,11 +1576,13 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				5EDAD58321D323BA00E37F68 /* HRUser.m in Sources */,
 				5ED1DC4421CCE6A500AAE3EB /* AppInfo.m in Sources */,
+				5E589A6722155DC1002012AE /* FSHttpClient.m in Sources */,
 				5E5899F4221297D8002012AE /* FSBaseViewController.m in Sources */,
 				5ED1DBEE21C9F25D00AAE3EB /* HRDialogModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				5ED1DC8121D07ECE00AAE3EB /* FSSplashViewController.m in Sources */,
 				5EDAD5C221D36F2E00E37F68 /* HRPaymentModule.m in Sources */,
+				5E589A552215037F002012AE /* FSHttpRequest.m in Sources */,
 				5E5899FF22129CEF002012AE /* FSRouter.m in Sources */,
 				5E5899FB22129AC2002012AE /* FSWebViewController.m in Sources */,
 				5ED1DBA321C8CC5500AAE3EB /* HRDate.m in Sources */,
